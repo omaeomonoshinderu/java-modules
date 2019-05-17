@@ -1,4 +1,4 @@
-package ifs_ints_and_loops;
+package _08_robot_in_space;
 
 import java.applet.AudioClip;
 import java.awt.KeyEventDispatcher;

@@ -1,4 +1,7 @@
-package extra;
+//    Copyright (c) The League of Amazing Programmers 2013-2019
+//    Level 0
+
+package _99_extra;
 
 import org.jointheleague.graphical.robot.Robot;
 

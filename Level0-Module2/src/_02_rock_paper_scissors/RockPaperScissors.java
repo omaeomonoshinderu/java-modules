@@ -1,7 +1,7 @@
 //    Copyright (c) The League of Amazing Programmers 2013-2017
 //    Level 0
 
-package random;
+package _02_rock_paper_scissors;
 
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;

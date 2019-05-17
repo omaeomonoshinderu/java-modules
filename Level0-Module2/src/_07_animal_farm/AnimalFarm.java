@@ -1,4 +1,4 @@
-package methods;
+package _07_animal_farm;
 
 import java.applet.AudioClip;
 

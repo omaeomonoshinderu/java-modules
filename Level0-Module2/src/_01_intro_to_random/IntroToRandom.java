@@ -1,7 +1,7 @@
 //    Copyright (c) The League of Amazing Programmers 2013-2017
 //    Level 0
 
-package random;
+package _01_intro_to_random;
 
 import java.util.Random;
 

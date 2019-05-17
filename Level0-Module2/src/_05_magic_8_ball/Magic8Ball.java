@@ -2,7 +2,7 @@
 //    Level 0
 
 
-package random;
+package _05_magic_8_ball;
 
 import java.util.Random;
 

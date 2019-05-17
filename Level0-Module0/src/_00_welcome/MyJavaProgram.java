@@ -1,4 +1,4 @@
-package strings_and_dialogs;
+package _00_welcome;
 import java.awt.Color;
 import org.jointheleague.graphical.robot.Robot;
 

@@ -1,4 +1,4 @@
-package strings_and_dialogs;
+package _00_welcome;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2017
  *    Level 0

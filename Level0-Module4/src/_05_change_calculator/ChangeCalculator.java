@@ -1,4 +1,4 @@
-package doubles_and_booleans;
+package _05_change_calculator;
 //    Copyright (c) The League of Amazing Programmers 2013-2017
 //    Level 0
 

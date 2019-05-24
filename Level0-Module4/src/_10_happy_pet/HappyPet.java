@@ -1,4 +1,4 @@
-package charAt_scanners_optionDialogs;
+package _10_happy_pet;
 import javax.swing.JOptionPane;
 
 public class HappyPet {

@@ -1,10 +1,10 @@
-package charAt_scanners_optionDialogs;
+package _08_string_methods;
 //    Copyright (c) The League of Amazing Programmers 2013-2017
 //    Level 0
 
 
 
-public class StringMethods1 {
+public class StringMethods {
 	public static void main(String[] args) {
 		
 		// 1. Create a String variable and initialize it to whatever you want

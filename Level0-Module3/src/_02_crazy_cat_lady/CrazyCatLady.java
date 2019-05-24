@@ -1,7 +1,7 @@
 //    Copyright (c) The League of Amazing Programmers 2013-2017
 //    Level 0
 
-package elseif;
+package _02_crazy_cat_lady;
 
 import java.net.URI;
 

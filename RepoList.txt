@@ -7,6 +7,7 @@ https://github.com/LEAGUE-Level0/Level0-Module5.git
 https://github.com/LEAGUE-Level1/Level1-Module0.git
 https://github.com/LEAGUE-Level1/Level1-Module1.git
 https://github.com/LEAGUE-Level1/Level1-Module2.git
+https://github.com/LEAGUE-Level1/Level1-Module3.git
 https://github.com/LEAGUE-Level1/Level1-Module4.git
 https://github.com/League-level2/Level2-Module0.git
 https://github.com/League-level2/Level2-Module1.git

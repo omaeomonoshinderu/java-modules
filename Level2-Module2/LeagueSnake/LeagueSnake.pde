@@ -11,6 +11,9 @@ class Segment {
 // Add a constructor with parameters to initialize each variable.
 
 
+// Add getter and setter methods for the x and y member variables.
+
+
 }
 
 

@@ -89,10 +89,17 @@ function dir_command {
 }
 echo "moving through directories"
 #This loop will go to each immediate child and execute dir_command
-find . -maxdepth 1 -type d \( ! -name . \) -name 'Level[0-9]*' | while read dir; do
-   dir_command "$dir/"
-   
-done
+#find . -maxdepth 1 -type d \( ! -name . \) -name 'Level[0-9]*' | while read dir; do
+#   dir_command "$dir/"
+#   
+#done
+
+while read in; do 
+        echo "copy repo over"
+        repoName=$(basename "$in" ".${in##*.}")
+        echo ${repoName}
+        dir_command "${repoName}/"
+done < RepoList.txt
 
 #Restore the folder
 cd "$cur"

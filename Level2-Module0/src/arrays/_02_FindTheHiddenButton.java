@@ -51,7 +51,7 @@ public class _02_FindTheHiddenButton implements ActionListener{
 		
 		//13. initialize the hiddenButton variable to a random number less than the int created int step 3
 		
-		//14. Set the text of the JButton located at hiddenButton the read "ME"
+		//14. Set the text of the JButton located at hiddenButton to  "ME"
 
 		//15. Use Thread.sleep(1000); to pause the program.
 		//    Surround it with a try/catch - use Eclipse helper for this

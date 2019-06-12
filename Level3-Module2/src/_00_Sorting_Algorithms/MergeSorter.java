@@ -40,13 +40,13 @@ public class MergeSorter extends Sorter {
             	//9. if temp array at i is less than or equal 
             	//   to temp array at j	
                 
-                	//10. set array at k equal to temp array at i
+                    //10. set array at k equal to temp array at i
                     
                     //11. increase i by 1
                   
                 //13. else
             
-                	//14. set array at k equal to temp array at j
+                    //14. set array at k equal to temp array at j
                    
                     //15. increase j by 1
                  

@@ -57,7 +57,7 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	}
 
 	private void loadBackgroundImage() throws Exception {
-		String imageFile = "src/magic_box/magic-box.jpg";
+		String imageFile = "src/_04_magic_box/magic-box.jpg";
 		try {
 			backgroundImage = ImageIO.read(new File(imageFile));
 		} catch (IOException e) {

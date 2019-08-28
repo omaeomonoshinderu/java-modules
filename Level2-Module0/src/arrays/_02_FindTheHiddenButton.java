@@ -49,7 +49,7 @@ public class _02_FindTheHiddenButton implements ActionListener{
 		
 		//12. Give the user the instructions for the game.
 		
-		//13. initialize the hiddenButton variable to a random number less than the int created int step 3
+		//13. initialize the hiddenButton variable to a random number less than the int created in step 3
 		
 		//14. Set the text of the JButton located at hiddenButton to  "ME"
 

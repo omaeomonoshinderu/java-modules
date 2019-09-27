@@ -11,7 +11,7 @@ public class Maze {
 		this.rows = rows;
 		this.cols = cols;
 
-		//2. Initialize the cells array using the rows and cols varibles
+		//2. Initialize the cells array using the rows and cols variables
 		
 		//3. Iterate  through each cell and initialize it
 		//   using row and col as the cell location

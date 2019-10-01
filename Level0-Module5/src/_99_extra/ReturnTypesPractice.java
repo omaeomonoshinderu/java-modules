@@ -2,8 +2,13 @@ package _99_extra;
 
 public class ReturnTypesPractice {
 	public static void main(String[] args) {
-		//Call each method and using a syso print out what each method returns
-	
+		// GOAL: Figure out what each of these hidden methods returns
+		// 1. Call each method
+		
+		// 2. Save the return of each method into a variable of the correct type(ex: String,int,etc)
+		
+		// 3. Print out each variable
+		
 	}
 	
 	static int method1() {

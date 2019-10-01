@@ -12,13 +12,17 @@ public class ReturnTypesAdvanced {
 	public static void main(String[] args) {
 		//1. Ask the user how many sides they want their shape to be
 		
-		//2. Call the canMakeShape() to see if the shape can be made with the number of sides entered
+		//2. Call canMakeShape() and save what is returned into a variable
 		
-			//3. If it can, then call the appropriate method to get the angle the robot needs to turn each time
-	
-			//4. Call the appropriate method to draw the Shape
+		//3. If the shape CAN be drawn
 		
-		//5. Else call the appropriate method and use a pop-up to tell the user they need to put a different number 
+			//4. Call and save what is returned from calculateTurningAngle()
+		
+			//5. Use drawPolygon() to draw your shape
+		
+		//6. If the shape CANNOT be drawn 
+			
+			//7. Call notEnoughSides() and print out what is returned 
 	
 	}
 	

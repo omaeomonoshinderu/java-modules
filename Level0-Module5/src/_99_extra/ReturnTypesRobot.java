@@ -15,8 +15,11 @@ public class ReturnTypesRobot {
 		
 		//2. Call the getTotalDistanceMethod() to get the distance the robot moved
 		
-		//3. If the distance is greater than 500, use a pop-up to say "Wow! That's really far!"
-		//   else use a pop up to say "Better luck next time."
+		//3. If the distance is greater than 500
+			
+			//4. Tell the user "Wow! That's really far!"
+		
+		//5. Else use a pop up to say "Better luck next time."
 		
 	}
 	

@@ -9,52 +9,54 @@ import java.applet.AudioClip;
 
 //Level 0
 
-
 import javax.swing.JApplet;
 import javax.swing.JOptionPane;
 
 public class AnimalFarm {
-
-	AnimalFarm() {
-		/*
-		 * 1. Ask the user which animal they want, then play the sound of that animal.
-		 */
-		
+	
+	public static void main(String[] args) {
+			
+		/* 1. Ask the user which animal they want, then play the sound of that animal. */			 
+			
 		/* 2. Make it so that the user can keep entering new animals. */
+
 	}
 
-	void playMoo() {
+	static void playMoo() {
 		playNoise(mooFile);
 	}
 
-	void playQuack() {
+	static void playQuack() {
 		playNoise(quackFile);
 	}
 
-	void playWoof() {
+	static void playWoof() {
 		playNoise(woofFile);
 	}
+	
+	static void playMeow() {
+		playNoise(meowFile);
+	}
+	
+	static void playLlama() {
+		playNoise(llamaFile);
+	}
 
-	String quackFile = "quack.wav";
-	String mooFile = "moo.wav";
-	String woofFile = "woof.wav";
-	String meowFile = "meow.wav";
-	String llamaFile = "llama.wav";
+	static String quackFile = "quack.wav";
+	static String mooFile = "moo.wav";
+	static String woofFile = "woof.wav";
+	static String meowFile = "meow.wav";
+	static String llamaFile = "llama.wav";
 
 	/* Ignore this stuff */
-
-	public void playNoise(String soundFile) {
+	
+	public static void playNoise(String soundFile) {
 		try {
-			AudioClip sound = JApplet.newAudioClip(getClass().getResource(soundFile));
+			AudioClip sound = JApplet.newAudioClip(AnimalFarm.class.getResource(soundFile));
 			sound.play();
 			Thread.sleep(3400);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 	}
-
-	public static void main(String[] args) {
-		new AnimalFarm();
-	}
-
 }

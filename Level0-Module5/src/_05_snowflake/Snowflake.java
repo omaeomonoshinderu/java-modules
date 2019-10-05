@@ -35,13 +35,13 @@ public class Snowflake {
 			// #8. turn the robot to the right by 60
 			
 			
-			// #12. set the pen color to blue for even numbers
+			// #12. set the pen color to blue for even numbers of i
 
 			
-			// #13. set the pen color to red for all odd numbers
+			// #13. set the pen color to red for all odd numbers of i
 			
 			
-			// #9. Use a for loop to do everything 6 times ( use j as a counter )
+			// #9. Use a for loop to do everything (#10, #11) 6 times ( use j as a counter )
 			
 			
 					// #10. turn the robot to the left by 60

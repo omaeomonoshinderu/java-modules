@@ -4,33 +4,31 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Stack;
 
+public class MazeMaker {
 
-public class MazeMaker{
-	
-	private static int width;
-	private static int height;
-	
+	private static int rows;
+	private static int cols;
+
 	private static Maze maze;
-	
+
 	private static Random randGen = new Random();
 	private static Stack<Cell> uncheckedCells = new Stack<Cell>();
-	
-	
-	public static Maze generateMaze(int w, int h){
-		width = w;
-		height = h;
-		maze = new Maze(width, height);
+
+	public static Maze generateMaze(int r, int c) {
+		rows = r;
+		cols = c;
+		maze = new Maze(rows, cols);
 		
-		//4. select a random cell to start
+		//1. select a random cell to start
 		
 		
-		//5. call selectNextPath method with the randomly selected cell
+		//2. call selectNextPath method with the randomly selected cell
 		
 		
 		return maze;
 	}
 
-	//6. Complete the selectNextPathMethod
+	//3. Complete the selectNextPathMethod
 	private static void selectNextPath(Cell currentCell) {
 		//A. mark cell as visited
 

@@ -26,7 +26,7 @@ exec 1>log.out 2>&1
 #TODO change to relative path.
 date
 echo "pulling changes"
-git pull https://github.com/League-central/java-modules.git
+git pull
 
 while read in; do 
     if ! git clone "$in" ; then
@@ -104,3 +104,5 @@ done < RepoList.txt
 
 #Restore the folder
 cd "$cur"
+
+git push

@@ -3,11 +3,11 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Cell {
-	public static final int X_MARGIN = 100;
-	public static final int Y_MARGIN = 100;
 	
-	private int x;
-	private int y;
+	public static final int MARGIN = 100;
+	
+	private int row;
+	private int col;
 	
 	private int size = 100;
 	
@@ -18,9 +18,9 @@ public class Cell {
 	private boolean eastWall; 
 	private boolean westWall;
 	
-	public Cell(int x, int y){
-		this.x = x;
-		this.y = y;
+	public Cell(int row, int col){
+		this.row = row;
+		this.col = col;
 		
 		visited = false;
 		
@@ -32,37 +32,38 @@ public class Cell {
 	
 	public void draw(Graphics g){
 		g.setColor(Color.BLUE);
-		g.fillOval((x * size) + (size / 2) + X_MARGIN, (y * size) + (size / 2) + Y_MARGIN, 4, 4);
+		g.fillOval((col * size) + (size / 2) + MARGIN, (row * size) + (size / 2) + MARGIN, 4, 4);
 		
 		g.setColor(Color.RED);
+		
 		if(northWall){
-			g.drawLine((x * size) + X_MARGIN, (y * size) + Y_MARGIN, (x * size) + size + X_MARGIN, (y * size) + Y_MARGIN);
+			g.drawLine((col * size) + MARGIN, (row * size) + MARGIN, (col * size) + size + MARGIN, (row * size) + MARGIN);
 		}
 		if(southWall){
-			g.drawLine((x * size) + X_MARGIN, (y * size) + size + Y_MARGIN, (x * size) + size + X_MARGIN, (y * size) + size + Y_MARGIN);
+			g.drawLine((col * size) + MARGIN, (row * size) + size + MARGIN, (col * size) + size + MARGIN, (row * size) + size + MARGIN);
 		}
 		if(eastWall){
-			g.drawLine((x * size) + size + X_MARGIN, (y * size) + Y_MARGIN, (x * size) + size + X_MARGIN, (y * size) + size + Y_MARGIN);
+			g.drawLine((col * size) + size + MARGIN, (row * size) + MARGIN, (col * size) + size + MARGIN, (row * size) + size + MARGIN);
 		}
-		if(westWall){
-			g.drawLine((x * size) + X_MARGIN, (y * size) + Y_MARGIN, (x * size) + X_MARGIN, (y * size) + size + Y_MARGIN);
+		if(westWall){			//g.drawLine((x * size) + X_MARGIN, (y * size) + Y_MARGIN, (x * size) + X_MARGIN, (y * size) + size + Y_MARGIN);
+			g.drawLine((col * size) + MARGIN, (row * size) + MARGIN, (col * size) + MARGIN, (row * size) + size + MARGIN);
 		}
 	}
 
-	public int getX() {
-		return x;
+	public int getRow() {
+		return row;
 	}
 
-	public void setX(int x) {
-		this.x = x;
+	public void setRow(int row) {
+		this.row = row;
 	}
 
-	public int getY() {
-		return y;
+	public int getCol() {
+		return col;
 	}
 
-	public void setY(int y) {
-		this.y = y;
+	public void setCol(int col) {
+		this.col = col;
 	}
 
 	public boolean hasBeenVisited() {

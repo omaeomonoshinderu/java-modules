@@ -84,7 +84,7 @@ public class SimonSays extends KeyAdapter {
 
 		// 9. Pack the frame
 
-		// 10. Set the defaultCloseOperation of your from to
+		// 10. Set the defaultCloseOperation of your frame to
 		// JFrame.EXIT_ON_CLOSE
 
 		// 11. Add a key listener to the frame

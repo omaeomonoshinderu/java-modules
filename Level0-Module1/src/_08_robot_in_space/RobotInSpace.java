@@ -37,7 +37,7 @@ public class RobotInSpace implements KeyEventDispatcher {
 
 		// 6. If right is pressed, move the Robot right.
 
-		// 7. Run your program and move the Robot to RD-2D for a surprise!
+		// 7. Run your program and move the Robot to R2-D2 for a surprise!
 	}
 
 	private void checkIfR2D2Found() throws Exception {

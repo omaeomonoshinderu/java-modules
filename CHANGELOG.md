@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 ### Added 
 - Changelog to keep track and report changes to teachers and volunteers.
-- New Level 0 Module 5 recipes add in '99_extra'
+- New Level 0 Module 5 recipes added in '99_extra'
   - HiddenTypes recipe
   - ListOfGoals recipes
   - ReturnTypesAdvanced recipe 

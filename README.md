@@ -1,35 +1,23 @@
 # java-modules
 Here you can update any module that is available.
-To add new modules please add them to the RepoList.txt. 
 
-# Contributors
+## Latest Changes
 
-Cody 
+### Added 
+- Changelog to keep track and report changes to teachers and volunteers.
+- New Level 0 Module 5 recipes added in '99_extra'
+  - HiddenTypes recipe
+  - ListOfGoals recipes
+  - ReturnTypesAdvanced recipe 
+  - ReturnTypesPractice recipe
+  - ReturnTypesRobot recipe
 
-Daniel
+### Changed
+- moved ObedientRobot from level0 mod3 to level0 mod5
 
-Mike
+### Fixed
+- R2D2 typo in robots in space
 
-Jackie
+### [changelog]
 
-Matt 
-
-Shachee
-
-Keith
-
-Dave
-
-Tyler
-
-## Interns:
-
-James
-
-Isabella
-
-Ollie
-
-Oscar
-
-Ian
+[changelog]: https://github.com/League-central/java-modules/blob/development/CHANGELOG.md

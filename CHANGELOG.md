@@ -3,7 +3,19 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 ### Added 
-- Added Changelog to keep track and report changes to teachers and volunteers.
+- Changelog to keep track and report changes to teachers and volunteers.
+- New Level 0 Module 5 recipes add in '99_extra'
+  - HiddenTypes recipe
+  - ListOfGoals recipes
+  - ReturnTypesAdvanced recipe 
+  - ReturnTypesPractice recipe
+  - ReturnTypesRobot recipe
+
+### Changed
+- moved ObedientRobot from level0 mod3 to level0 mod5
+
+### Fixed
+- R2D2 typo in robots in space
 
 ## [1.0.0] - 2019-12-06
 

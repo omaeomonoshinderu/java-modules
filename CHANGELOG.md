@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+### Added 
+- Added Changelog to keep track and report changes to teachers and volunteers.
 
 ## [1.0.0] - 2019-12-06
 
@@ -9,7 +11,7 @@ All notable changes to this project will be documented in this file.
 [Unreleased]: https://github.com/League-central/java-modules/compare/master...development
 
 
-# Guiding Principles
+# Guiding Principles for this Changelog
 - Changelogs are for humans, not machines.
 - There should be an entry for every single version.
 - The same types of changes should be grouped.
@@ -26,5 +28,5 @@ for changes in existing functionality.
 for soon-to-be removed features.
 ### Removed
 for now removed features.
-## Fixed 
+### Fixed 
 for any bug fixes.

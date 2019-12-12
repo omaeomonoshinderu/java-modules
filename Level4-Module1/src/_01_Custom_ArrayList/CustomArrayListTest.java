@@ -3,7 +3,7 @@ package _01_Custom_ArrayList;
 import static org.junit.Assert.*;
 import org.junit.jupiter.api.Test;
 
-//Complete the ArrayList class using the template to make the tests pass.
+//Complete the ArrayList class using the generic to make the tests pass.
 
 public class CustomArrayListTest {
 

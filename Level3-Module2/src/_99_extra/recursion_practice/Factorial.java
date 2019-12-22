@@ -1,11 +1,19 @@
 package _99_extra.recursion_practice;
 
 public class Factorial {
+	/*
+	  Factorial is the operation that returns the product (multiplication)
+	  of all of the positive integers between n and 0.
+	 
+	  e.g. 
+	  5! = 5*4*3*2*1 = 120
+	 */
 	public static int factorial(int n) {
-		//1. Make an if statment to check of n is zero
-			//2. if its zero return 1
+		//1. If n is zero
+			//2. return 1
 		
 			//3. else return n * factorial(n-1)
+		return 0;
 	}
 	
 	public static void main(String[] args) {

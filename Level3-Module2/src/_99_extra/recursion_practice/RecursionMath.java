@@ -1,38 +1,54 @@
 package _99_extra.recursion_practice;
 
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
 public class RecursionMath {
 	
-	public static int recursionMultiplication(int number, int times) {
-		//1. Create a if statement to decide weather to multiply again or to stop the cycle based on the 'times' number
+	public static int recursiveMultiplication(int number, int times) {
+		//2. if times is 1 
+			//3. return number 
 		
-		//2. If you keep going, return this method with times-1 + the number that was passed in
+		//4. else return number + recursionMultiplication(number, times-1)
 		
-		//3. If you are stopping, just return 0. This will stop the cycle
+		return 0;
+	}
+	
+	//6. Try this one on your own! 
+	//Hint: if numberToDevideBy is bigger than number, you can't divide anymore
+	public static int recursiveDivision(int number, int numberToDevideBy) {
 		return 0;
 		
 	}
 	
-	//4. Try this one on your own! Hint: if numberToDevideBy is bigger than number, you can't divide anymore
-	public static int recursionDivision(int number, int numberToDevideBy) {
+	//8. Try this one on your own!
+	public static int recursivePower(int number, int power) {
 		return 0;
 		
 	}
 	
-	//5. Try this one on your own!
-	public static int recursionPower(int number, int power) {
-		return 0;
+	
+	
+	@Test
+	void testMultiplication() {
+		assertEquals(12, recursiveMultiplication(3, 4));
+		//1  Add more JUnit tests like the one above to test your method
 		
 	}
 	
-	public static void main(String[] args) {
-		System.out.println("recursionMultiplication: 5*10 = 50 " + recursionMultiplication(5, 10) + " should be 50");
-		System.out.println("recursionMultiplication: 7*7 = 49 " + recursionMultiplication(7, 7) + " should be 49");
-		System.out.println("recursionMultiplication: 12*45 = " + recursionMultiplication(12, 45) + " should be 540");
-		System.out.println("recursionDivision: 10/5 = " + recursionDivision(10, 5) + " should be 2");
-		System.out.println("recursionDivision: 70/7 = " + recursionDivision(70, 7) + " should be 10");
-		System.out.println("recursionDivision: 120/6 = " + recursionDivision(120, 6) + " should be 20");
-		System.out.println("recursionPower: 2⁶ = " + recursionPower(2, 6) + " should be 64");
-		System.out.println("recursionPower: 3³ = " + recursionPower(3, 3) + " should be 27");
-		System.out.println("recursionPower: 55⁰ = " + recursionPower(55, 0) + " should be 1");
+	
+	@Test
+	void testDivision() {
+		//5  Add JUnit tests to test your method
+		
 	}
+	
+	
+	@Test 
+	void testPower() {
+		//7  Add JUnit tests to test your method
+	
+	}
+	
 }

@@ -116,7 +116,7 @@ public class PixelParty {
 	public void saveImage() {
 		String fn = fileName + "." + fileType;
 		try {
-			File file = new File( "src/extra/" + fn);
+			File file = new File( "src/_99_extra/" + fn);
 			System.out.println("Saving image to "+getLocalPath()+fn);
 			ImageIO.write(img, fileType, file);
 		} catch (IOException e) {

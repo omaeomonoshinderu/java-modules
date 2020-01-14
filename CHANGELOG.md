@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## ## [1.0.1] - 2020-01-13
 ### Added 
 - Changelog to keep track and report changes to teachers and volunteers.
 - New Level 0 Module 5 recipes added in '99_extra'

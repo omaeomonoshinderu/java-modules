@@ -5,7 +5,7 @@ public class ToDoList {
 	 * Create a program with five buttons, add task, view tasks, remove task, save list, and load list. 
 	 *
 	 * When add task is clicked:
-	 * 		Create a JOptionPane to ask the user for a task and save it to an ArrayList
+	 * 		Create a JOptionPane to ask the user for a task and add it to an ArrayList
 	 * 
 	 * When the view tasks button is clicked:
 	 *		show all the tasks in the list

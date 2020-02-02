@@ -21,20 +21,24 @@ public class _02_InterpolationSearch {
         //   value is greater than or equal to the array element at start
         //   value is less than or equal to the array element at end
 
-			//4. create an integer called position
+		//4. If start is equal to end,
+		//     then check if the array element at start is equal to the value
+		//     and return start if it is, otherwise return -1.
+		
+		//5. create an integer called position
         	//  initialize it to the following:
-        	//  start + (((end - start) / (array[end] - array[start])) * (value - array[start]));
+        	//  start + (((end - start) * (value - array[start])) / (array[end] - array[start]));
         	//  This calculates the center of the array keeping the even distribution in mind.
       
-            //5. if the array element at position is equal to the value,
+            //6. if the array element at position is equal to the value,
             //   then we found it and can return position.
       
-            //6. if the array element at position is less than value,
+            //7. if the array element at position is less than value,
             //   then set start equal to position plus one
             
-            //7. otherwise, set end equal to position minus one
+            //8. otherwise, set end equal to position minus one
           
-        //8. Return -1 because the value was not found
+        //9. Return -1 because the value was not found
         return 0;
     }
 }

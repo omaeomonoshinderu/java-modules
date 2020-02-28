@@ -1,4 +1,4 @@
-package _01_robot_square;
+package _01_robot._1_robot_square;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2017
  *    Level 0

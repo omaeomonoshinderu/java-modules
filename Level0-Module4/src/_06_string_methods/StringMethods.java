@@ -1,4 +1,4 @@
-package _08_string_methods;
+package _06_string_methods;
 //    Copyright (c) The League of Amazing Programmers 2013-2017
 //    Level 0
 

@@ -1,4 +1,4 @@
-package _10_happy_pet;
+package _08_happy_pet;
 import javax.swing.JOptionPane;
 
 public class HappyPet {

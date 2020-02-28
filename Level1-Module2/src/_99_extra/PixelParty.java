@@ -143,8 +143,13 @@ public class PixelParty {
 		return rgb;
 	}
 	
-	private JLabel createLabel(String fn) {
-		Icon icon = new ImageIcon(getLocalPath()+fn);
+	private JLabel createLabel(String fileName) {
+		URL imageURL = getClass().getResource(fileName);
+		if (imageURL == null) {
+			System.err.println("Could not find image " + fileName);
+			return new JLabel();
+		}
+		Icon icon = new ImageIcon(imageURL);
 		JLabel imageLabel = new JLabel(icon);
 		return imageLabel;
 	}

@@ -1,5 +1,7 @@
-# java-modules
-Here you can update any module that is available.
+# The League of Amazing Programmers Java Modules
+Make changes or suggestions
+
+# Changelog
 
 ## Latest Changes
 

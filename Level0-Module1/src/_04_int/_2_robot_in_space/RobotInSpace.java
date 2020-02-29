@@ -2,7 +2,7 @@
 //    Level 0
 
 
-package _08_robot_in_space;
+package _04_int._2_robot_in_space;
 
 import java.applet.AudioClip;
 import java.awt.KeyEventDispatcher;

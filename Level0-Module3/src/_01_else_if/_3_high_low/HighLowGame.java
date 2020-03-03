@@ -1,7 +1,5 @@
-//    Copyright (c) The League of Amazing Programmers 2013-2017
-//    Level 0
 
-package _03_high_low;
+package _01_else_if._3_high_low;
 
 import java.util.Random;
 

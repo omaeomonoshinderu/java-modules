@@ -1,7 +1,5 @@
-//    Copyright (c) The League of Amazing Programmers 2013-2017
-//    Level 0
 
-package _08_shiny_objects;
+package _02_loop_variables._2_shiny_objects;
 
 import java.applet.AudioClip;
 
@@ -12,14 +10,17 @@ import javax.swing.JApplet;
 
 public class ShinyObjects {
 	public static void main(String[] args) {
+		
+		// 1. Call the method below to play the sound
 		// 2. Ask the user how many shiny objects they want
-
 		// 3. Play the sound that many times
 
-		// 1. Call the method below
+
 
 	}
 
+	/********************   Use this method. DON'T CHANGE THE CODE BELOW  ***********************/
+	
 	public static void playMisterZee() {
 		try {
 			AudioClip sound = JApplet.newAudioClip(ShinyObjects.class.getResource("shiny-objects.wav"));

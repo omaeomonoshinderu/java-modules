@@ -1,8 +1,4 @@
 package _02_nested_loops._1_snowflake;
-/*
- *    Copyright (c) The League of Amazing Programmers 2013-2017
- *    Level 0
- */
 
 import java.awt.Color;
 

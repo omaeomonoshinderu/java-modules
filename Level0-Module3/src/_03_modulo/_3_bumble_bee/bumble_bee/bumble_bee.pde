@@ -1,3 +1,4 @@
+
 void setup() {
      ellipseMode(CENTER);
      size(500, 500);
@@ -7,12 +8,23 @@ void setup() {
 
 void draw() {
   
-/*Use a loop to make a body for the Bee!
-Then put his head on using drawBeeFace(x,y)
-Use modulo to make the colors alternate 
+// First run the program and you should see a flower.  
+  
+  
+/* Then, use a loop to make a body for the Bee! 
+(see the image on the recipe, it's a diagonal line of circles)
+Use modulo to make the colors alternate between yellow and black
+*/
+
+
+
+/*
+Now put his head on using drawBeeFace(x,y)
 */
 
 }
+
+/**************   Use these methods but  DON'T CHANGE THE CODE BELOW  **************/
 
 void drawFlower(int x, int y) {
      noStroke();

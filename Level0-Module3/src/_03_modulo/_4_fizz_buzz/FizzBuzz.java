@@ -1,5 +1,5 @@
 
-package _03_modulo._5_fizz_buzz;
+package _03_modulo._4_fizz_buzz;
 
 
 /**

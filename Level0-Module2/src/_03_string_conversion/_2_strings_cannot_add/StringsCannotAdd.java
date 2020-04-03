@@ -10,7 +10,7 @@ public class StringsCannotAdd {
 			
 			// 3) Ask the user to enter number 6 and hold it in the variable sixAsString 
 			
-			// 4) Print the addition of fourAsString and sizAsString using JOptionPane 
+			// 4) Print the addition of fourAsString and sixAsString using JOptionPane 
 			
 			// Did you notice 46 instead of 4 + 6 = 10?
 			
@@ -20,7 +20,7 @@ public class StringsCannotAdd {
 			
 			//Did you notice 456 instead of 4 + 6 + 5 = 15?
 			
-			// Insert fourAsString inside the parenthesis of Integer.parseInt(*fourAsString*) and set the method equal to fourAsInt
+			// Insert fourAsString inside the parenthesis of Integer.parseInt() and set the method equal to fourAsInt
 			// Hint: int fourAsInt = Integer.parseInt(fourAsString);
 			
 			// 7) Do the same for sixAsString. 

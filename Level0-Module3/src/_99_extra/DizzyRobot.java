@@ -1,5 +1,3 @@
-//    Copyright (c) The League of Amazing Programmers 2013-2017
-//    Level 0
 
 package _99_extra;
 
@@ -9,13 +7,14 @@ public class DizzyRobot {
 	static Robot robot = new Robot();
 	public static void main(String[] args) {
 		
-		 // 2. Ask the user how dizzy you want the robot from 1-10, then spin that number of times.
-
- // 1. Use the dance method to make the robot spin.
+		// 1. Use the dance method below to make the robot spin.		
+		// 2. Ask the user how dizzy you want the robot from 1-10, then spin that number of times.
 	
 
 	}
 
+	/*****************   Use this method, DON'T CHANGE THE CODE BELOW  **************/
+	
 	static void dance(int numberOfSpins) {
 		for (int i = 0; i < numberOfSpins; i++) {
 			robot.turn(360);

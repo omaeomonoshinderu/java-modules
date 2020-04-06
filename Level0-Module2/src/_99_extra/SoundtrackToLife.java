@@ -21,7 +21,7 @@ public class SoundtrackToLife {
 		// 4. Play different songs for other moods.
 
 /**
-* If you can’t think of any, here are some you can use...
+* If you can't think of any, here are some you can use...
 *	http://bit.ly/video-for-happy
 *	http://bit.ly/video-for-sad
 *	http://bit.ly/video-for-angry

@@ -18,7 +18,7 @@ public class Code4Life {
 	// they're a Code Ninja
 
 	// 4. If it is more than 5, call the method below to play the Batman theme song.
-	// NOTE: You may have to get batman.wav from league-sounds on github
+	// NOTE: You may have to get batman.wav from league-sounds on github: https://github.com/jointheleague/league-sounds
 
 	private static void playBatmanTheme() {
 		try {

@@ -2,11 +2,11 @@
 package _99_extra;
 
  /* NASA wants to shoot a rocket into orbit. 
-  * Somebody has to do the countdown – or the rocket won’t launch.
+  * Somebody has to do the countdown or the rocket won't launch.
  * 
  * The ground control chief will tell you where to start – then count down to 0. 
  * 
- * (example for ’11’: 11 10 9 8 7 6 5 4 3 2 1 0)
+ * (example for '11': 11 10 9 8 7 6 5 4 3 2 1 0)
  * 
  **/
 

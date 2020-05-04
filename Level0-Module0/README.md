@@ -1,9 +1,9 @@
 # Level0-Module0
 Recipes for students who have just started Level 0. 
-At the end of this module, students will be able to:
+This module is in place of the introductory workshop.
+Students will learn how to:
 
-1. Create a new Java class
-2. Add a main method to the class
-3. Code a pop-up dialog to display a message to the user
-4. Code a pop-up dialog to ask the user for their favorite color
-5. Join Strings using +
+1. Draw shapes and images using Processin
+2. Control the flow of code using if and for statements
+3. Print Strings and use dialogs to interact with a user 
+4. Build simple games using skills learned

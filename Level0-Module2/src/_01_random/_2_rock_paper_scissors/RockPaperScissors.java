@@ -77,7 +77,7 @@ public class RockPaperScissors extends JPanel implements ActionListener{
         //1. Run the program and play many rounds of Rock Paper Scissors. Does the computer always choose the same thing?
 
         //2. Change the value of opponentSelection to be a random number between 0 and 2;
-	//   Don't forget to create a Random object.
+        //   Don't forget to create a Random object.
 	    
         //2. Change the value of opponentSelection to be a random number between 0 and 2; 
         int opponentSelection = 0;

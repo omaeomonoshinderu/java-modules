@@ -23,11 +23,11 @@ public class StephenHawking {
 	
 	
 	
-	/* Don’t change this…. */
+	/* Don't change this. */
 	static void speak(String words) {
 		
 		if (System.getProperty("os.name").contains("Windows")) {
-			String cmd = "PowerShell -Command \"Add-Type –AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('"
+			String cmd = "PowerShell -Command \"Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('"
 					+ words + "');\"";
 			try {
 				Runtime.getRuntime().exec(cmd).waitFor();

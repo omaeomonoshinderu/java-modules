@@ -36,6 +36,7 @@ public class MergeSorter extends Sorter {
             
             //8. while i is less than or equal to middle
             //   and j is less than or equal to high
+	    // (ends after step 16)
             
             	//9. if temp array at i is less than or equal 
             	//   to temp array at j	
@@ -44,7 +45,7 @@ public class MergeSorter extends Sorter {
                     
                     //11. increase i by 1
                   
-                //13. else
+                //13. else (ends after step 15)
             
                     //14. set array at k equal to temp array at j
                    

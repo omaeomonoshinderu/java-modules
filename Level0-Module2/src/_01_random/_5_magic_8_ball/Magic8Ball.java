@@ -13,7 +13,7 @@ public class Magic8Ball {
 	// 2. Get the user to enter a question for the 8 ball to answer
 	
 
-	// 3. Make a variable that will hold a random number and put a random number
+	// 3. Make a variable and initialize it to a random number.
 	//     ** You will need to make a random object!
 	//     Limit the random numbers to be between 0 and 3
 

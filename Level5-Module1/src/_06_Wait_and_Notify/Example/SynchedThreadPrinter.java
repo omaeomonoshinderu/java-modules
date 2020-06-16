@@ -39,7 +39,6 @@ public class SynchedThreadPrinter implements Runnable{
 			System.out.println("Thread " + thread + " Line 4");
 			threadLock.notify(); //let other threads waiting on threadLock know that they can start
 		}
-		System.out.println("Thread " + thread + " finished");
 	}
 }
 

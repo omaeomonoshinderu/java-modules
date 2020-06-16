@@ -14,6 +14,5 @@ public class ThreadPrinter implements Runnable{
 		System.out.println("Thread " + thread + " Line 2");
 		System.out.println("Thread " + thread + " Line 3");
 		System.out.println("Thread " + thread + " Line 4");
-		System.out.println("Thread " + thread + " finished");
 	}
 }

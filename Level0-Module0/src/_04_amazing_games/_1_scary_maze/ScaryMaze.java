@@ -118,7 +118,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 	/**********  DO NOT CHANGE THE CODE BELOW THIS LINE ***************/
 	
 	private void playScarySound(String soundName) {
-		File sound = new File("src/section5/"+soundName);
+		File sound = new File("src/_04_amazing_games/_1_scary_maze/"+soundName);
 		if (sound.exists()) {
 			try {
 				Clip clip = AudioSystem.getClip();

@@ -1,4 +1,6 @@
-
+/*** When you are done, this program will draw an ellipse 
+     that travels across the screen when the mouse is pressed.
+***/
 
 int x;
 

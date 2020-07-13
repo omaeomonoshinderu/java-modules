@@ -1,9 +1,12 @@
+/*** When you are done, this program will draw a mole in 
+     each of the holes.
+***/
 
 void setup() {
      size(400, 400);
      background(78, 166, 51); // green grass
      
-     // This code draws the holes
+     // This code draws the holes. Run the program to see them.
      
      fill(0, 0, 0);
      ellipse(200, 200, 100, 30);
@@ -14,7 +17,7 @@ void setup() {
 
 void draw() {
 
-/* Write code here that uses the method below to put a mole in each of the holes */
+/* Write code here that uses the drawMole method to put a mole in each of the holes */
 
 
 }

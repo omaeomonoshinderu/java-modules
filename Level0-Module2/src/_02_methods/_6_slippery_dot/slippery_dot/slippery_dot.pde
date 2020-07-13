@@ -1,6 +1,6 @@
-
- // Make a slippery dot. When you click on the dot it will slide to a new location.
- 
+/*** When you are done, this program will draw an ellipse 
+     that jumps to new location each time you click on it.
+***/
  
  // 1. Create three integer variables to represent the x, y, and the size of the ellipse
        

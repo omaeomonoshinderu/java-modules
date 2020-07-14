@@ -28,7 +28,8 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		
 		//1. Use this online tool (https://www.pixilart.com/) to make a maze image. Size = 500x500
 		//   The maze must be drawn using 4 different colors, one each for: START, END, BACKGROUND, and path.
-		//   Download your maze image to the computer. Drag and drop it into the section5 package 
+		//   Download your maze image to the computer desktop. 
+		//   Drag and drop the image into the _04_amazing_games._1_scary_maze package 
 		
 		
 		//2. Change the line of code below so that it uses YOUR maze's file name
@@ -99,14 +100,14 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		 * If you are not sure, ask your teacher 
 		 * *****************/
 		
-		//10. Find a scary sound and put it in the section5 package where you put your maze picture. 
+		//10. Find a scary sound and put it in the _04_amazing_games._1_scary_maze package (where you put your maze picture). 
 		//    You can find a sound on freesound.org. Log in as leagueofamazing/code4life.
 		
 		//11. Play the scary sound. Hint: use the playScarySound method with the name of your sound file		
 		
 		/**********  SHOW A PICTURE ***************/
 
-		//12. Find a scary image and drop it into the section5 package. 
+		//12. Find a scary image and drop it into the _04_amazing_games._1_scary_maze package. 
 		//    Use the showScaryImage method below and send it the name of your picture file
 		
 		
@@ -117,7 +118,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 	/**********  DO NOT CHANGE THE CODE BELOW THIS LINE ***************/
 	
 	private void playScarySound(String soundName) {
-		File sound = new File("src/section5/"+soundName);
+		File sound = new File("src/_04_amazing_games/_1_scary_maze/"+soundName);
 		if (sound.exists()) {
 			try {
 				Clip clip = AudioSystem.getClip();

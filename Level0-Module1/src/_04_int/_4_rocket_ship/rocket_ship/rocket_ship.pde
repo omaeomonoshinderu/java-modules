@@ -2,9 +2,8 @@ int x = 400;
 int y = 600; 
 
 void setup() {
-
-    background(0, 0, 40); size(800, 800);
-
+    size(800, 800);
+    background(0, 0, 40); 
 }
 
 void draw() {

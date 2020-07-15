@@ -28,7 +28,7 @@ public class DragonFight {
 			// to 0 for now.
 
 		
-		//  This while statement will cause the game to repeat until the player or dragon run out of health
+		//  This while statement will cause the game attack code to repeat
 		while (true) {
 
 			// THE PLAYER ATTACKS THE DRAGON
@@ -38,41 +38,40 @@ public class DragonFight {
 	
 				// 4. If they typed in "yell":
 	
-					// -- Find a random number between 0 and 10 and store it in playerAttack. Use
-					// ran.nextInt(10)
-		
-					// -- Subtract the player attack value from the dragon's health
-	
+					  // -- Find a random number between 0 and 10 and store it in playerAttack. Use
+					  // ran.nextInt(10)
+			
 				// 5. If they typed in "kick":
 	
-					// -- Find a random number between 0 and 25 and store it in playerAttack.
+					  // -- Find a random number between 0 and 25 and store it in playerAttack.
 		
-					// -- Subtract the player attack value from the dragon's health
+				// 6. Subtract the player attack value from the dragon's health
 
 			// THE DRAGON RETALIATES
 
-				// 6. Find a random number between 0 and 35 and store it in dragonAttack
+				// 7. Find a random number between 0 and 35 and store it in dragonAttack
 	
-				// 7. Subtract the dragon attack value from the player's health
+				// 8. Subtract the dragon attack value from the player's health
 
-			// ASSESS THE DAMAGE CAUSED 
+			// ASSESS THE DAMAGE
 
-				// 8. If the player's health is less than or equal to 0
-				// call the playerLost() method
+				// 9. If the player's health is less than or equal to 0, the game is over,
+				//    call the playerLost() method
 	
 			
-				// 9. Else if the dragon's health is less than or equal to 0
-				// call the dragonLost() method
+				// 10. If the dragon's health is less than or equal to 0, the game is over,
+				//     call the dragonLost() method
 
 			
-			// 10.  Pop up a message that tells the player the health levels of player and
-			// 		dragon.
+				// 11.  Pop up a message that tells us how much health the player and
+				// 		dragon have left.
 
 			
 			// (Bonus: Also display the amount of health that was lost by each in this
 			// round)
+			
 
-		}
+		} // this is the end of the while loop
 
 	}
 

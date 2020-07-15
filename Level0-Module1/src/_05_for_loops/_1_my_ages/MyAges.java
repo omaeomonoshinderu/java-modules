@@ -3,7 +3,7 @@ package _05_for_loops._1_my_ages;
 public class MyAges {
 	public static void main(String[] args) {
 		
-		/** This program will use loops print all the ages you have been alive, 
+		/** This program will use loops to print all the ages you have been alive, 
 		 * from zero up to your current age. **/
 
 		// Make an int variable called age, to track how many times the loop has repeated

@@ -11,7 +11,9 @@ public class FourSquare {
 		
 		// Make the robot move quickly (setSpeed)
 
-		// Set the robot's pen width to 5                   
+		// Set the robot's pen width to 5  
+		
+		// Put the robot's pen down
 		
 		// This numberOfSquares variable will track how many squares the robot has drawn
 		// It's set to zero here, because the robot hasn't drawn any squares yet.

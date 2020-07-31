@@ -1,4 +1,4 @@
-package _2_strings_cannot_add;
+package _03_string_conversion._2_strings_cannot_add;
 
 import javax.swing.JOptionPane;
 

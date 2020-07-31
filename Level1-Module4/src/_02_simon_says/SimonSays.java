@@ -33,7 +33,7 @@ public class SimonSays extends KeyAdapter {
 
 	public void run() {
 		// 2. Add the four images that match keyboard keys like this:
-		// images.put(new Integer(KeyEvent.VK_UP), "up.jpg");
+		// images.put(KeyEvent.VK_UP, "up.jpg");
 
 		// 3. Use a JOptionPane to tell the user the rules: "Press the matching
 		// key when
@@ -109,11 +109,22 @@ public class SimonSays extends KeyAdapter {
 		return new JLabel(icon);
 	}
 
-	void speak(String words) {
-		try {
-			Runtime.getRuntime().exec("say " + words).waitFor();
-		} catch (Exception e) {
-			e.printStackTrace();
+	static void speak(String words) {
+		
+		if (System.getProperty("os.name").contains("Windows")) {
+			String cmd = "PowerShell -Command \"Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('"
+					+ words + "');\"";
+			try {
+				Runtime.getRuntime().exec(cmd).waitFor();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			try {
+				Runtime.getRuntime().exec("say " + words).waitFor();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 	}
 

@@ -1,12 +1,12 @@
-
-
- // Draw an ice cream cone with many flavors and lots of sprinkles!
+/*** When you are done, this program will draw an ice cream cone with 
+     scoops of ice cream, sprinkles, and a cherry on top.
+***/
 
 void setup(){
 
      size(500,500);
      
-     // Call the makeIceCreamCone() method below to make an ice cream cone
+     // Call the makeIceCreamCone() method below to draw the cone for your ice cream
 
      // Use the addScoop method below to add as many scoops of ice cream as you want
      // Choose a different flavor for each scoop

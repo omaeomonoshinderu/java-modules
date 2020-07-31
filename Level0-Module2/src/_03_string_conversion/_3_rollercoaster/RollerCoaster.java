@@ -1,4 +1,4 @@
-package _3_rollercoaster;
+package _03_string_conversion._3_rollercoaster;
 
 import javax.swing.JOptionPane;
 

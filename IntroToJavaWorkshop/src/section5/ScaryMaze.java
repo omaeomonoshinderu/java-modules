@@ -11,6 +11,7 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -18,6 +19,7 @@ import javax.swing.SwingUtilities;
 
 public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 	
+
 	/***********  SOUND ***************
 	 * Some computers are unable to play sounds. 
 	 * If you cannot play sound on this computer, set canPlaySounds to false.
@@ -34,8 +36,9 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		
 		//1. Use this online tool (https://www.pixilart.com/) to make a maze image. Size = 500x500
 		//   The maze must be drawn using 4 different colors, one each for: START, END, BACKGROUND, and path.
-		//   Download your maze image to the computer desktop. 
-		//   Drag and drop the image into the _04_amazing_games._1_scary_maze package 
+
+		//   Download your maze image to the computer. 
+		//   Drag and drop it into the section5 package 
 		
 		
 		//2. Change the line of code below so that it uses YOUR maze's file name
@@ -45,7 +48,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		//3. Run the program. Do you see your maze? Don't continue until you do.
 		
 		
-		// Leave this code here! It will allow the program to know when the mouse moves. 
+		// Leave this code here! It will allow our program to know when the mouse moves. 
 		addMouseMotionListener(this);
 		
 	}
@@ -76,7 +79,9 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 
 		
 		//8. Run the program and move the mouse over the BACKGROUND COLOR. 
+
 		//   Use the number that is printed to the console to set the background color variable 
+
 
 		
 		
@@ -112,6 +117,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		/**********  SHOW A PICTURE ***************/
 
 		//12. Find a scary image and drop it into the _04_amazing_games._1_scary_maze package. 
+
 		//    Use the showScaryImage method below and send it the name of your picture file
 		
 		
@@ -122,7 +128,9 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 	/**********  DO NOT CHANGE THE CODE BELOW THIS LINE ***************/
 	
 	private void playScarySound(String soundName) {
-		File sound = new File("src/_04_amazing_games/_1_scary_maze/"+soundName);
+
+		File sound = new File("src/section5/"+soundName);
+
 		if (sound.exists()) {
 			try {
 				Clip clip = AudioSystem.getClip();

@@ -63,7 +63,7 @@ public class AnimalFarm {
 	
 
 	/* Ignore this stuff */
-	String pacakge = "src/_02_methods/_1_animal_farm/";
+	String path = "src/_02_methods/_1_animal_farm/";
 	String quackFile = "quack.wav";
 	String mooFile = "moo.wav";
 	String woofFile = "woof.wav";
@@ -81,7 +81,7 @@ public class AnimalFarm {
 	
 	private void playNoise(String soundFile) {
 		if (canPlaySounds) {	
-			File sound = new File(pacakge+soundFile);
+			File sound = new File(path+soundFile);
 			if (sound.exists()) {
 				new Thread(() -> {
 				try {
@@ -101,11 +101,11 @@ public class AnimalFarm {
 	}
 	public AnimalFarm() {
 		try {
-			llamaIcon = new ImageIcon(pacakge+"llama.jpg");
-			cowIcon = new ImageIcon(pacakge+"cow.jpg");
-			dogIcon = new ImageIcon(pacakge+"dog.jpg");
-			catIcon = new ImageIcon(pacakge+"cat.jpg");
-			duckIcon = new ImageIcon(pacakge+"duck.jpg");
+			llamaIcon = new ImageIcon(path+"llama.jpg");
+			cowIcon = new ImageIcon(path+"cow.jpg");
+			dogIcon = new ImageIcon(path+"dog.jpg");
+			catIcon = new ImageIcon(path+"cat.jpg");
+			duckIcon = new ImageIcon(path+"duck.jpg");
 
 		} catch (Exception e) {
 					

@@ -4,15 +4,10 @@
 
 package _02_methods._2_safe_cracker;
 
-import java.applet.AudioClip;
 import java.io.File;
-import java.net.MalformedURLException;
 import java.util.Random;
-
-import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.swing.JApplet;
 import javax.swing.JOptionPane;
 
 public class SafeCracker {

@@ -35,27 +35,27 @@ public class AnimalFarm {
 
 	void moo() {
 		playNoise(mooFile);
-		showImage(cowImage);
+		showImage(cowIcon);
 	}
 
 	void quack() {
 		playNoise(quackFile);
-		showImage(duckImage);
+		showImage(duckIcon);
 	}
 
 	void woof() {
 		playNoise(woofFile);
-		showImage(dogImage);
+		showImage(dogIcon);
 	}
 	
 	void meow() {
 		playNoise(meowFile);
-		showImage(catImage);
+		showImage(catIcon);
 	}
 	
 	void llamaScream() {
 		playNoise(llamaFile);
-		showImage(llamaImage);
+		showImage(llamaIcon);
 	}
 	
 
@@ -63,31 +63,25 @@ public class AnimalFarm {
 	
 
 	/* Ignore this stuff */
+	String pacakge = "src/_02_methods/_1_animal_farm/";
 	String quackFile = "quack.wav";
-	String duckImage = "duck.jpg";
 	String mooFile = "moo.wav";
-	String cowImage = "cow.jpg";
 	String woofFile = "woof.wav";
-	String dogImage = "dog.jpg";
 	String meowFile = "meow.wav";
-	String catImage = "cat.jpg";
 	String llamaFile = "llama.wav";
-	String llamaImage = "llama.jpg";
+	ImageIcon llamaIcon;
+	ImageIcon catIcon;
+	ImageIcon dogIcon;
+	ImageIcon duckIcon;
+	ImageIcon cowIcon;
 	
-	private void showImage (String imageFile) {
-		try {
-			ImageIcon animalPic = new ImageIcon("src/_02_methods/_1_animal_farm/"+imageFile);
-			JOptionPane.showMessageDialog(null, "", "You chose", 0, animalPic);
-
-		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, "I don't know what that animal looks like");			
-		}
-		
+	private void showImage (ImageIcon icon) {
+			JOptionPane.showMessageDialog(null, "", "You chose", 0, icon);
 	}
 	
 	private void playNoise(String soundFile) {
 		if (canPlaySounds) {	
-			File sound = new File("src/_02_methods/_1_animal_farm/"+soundFile);
+			File sound = new File(pacakge+soundFile);
 			if (sound.exists()) {
 				new Thread(() -> {
 				try {
@@ -103,6 +97,18 @@ public class AnimalFarm {
 			else {
 				System.out.println("File does not exist");
 			}
+		}
+	}
+	public AnimalFarm() {
+		try {
+			llamaIcon = new ImageIcon(pacakge+"llama.jpg");
+			cowIcon = new ImageIcon(pacakge+"cow.jpg");
+			dogIcon = new ImageIcon(pacakge+"dog.jpg");
+			catIcon = new ImageIcon(pacakge+"cat.jpg");
+			duckIcon = new ImageIcon(pacakge+"duck.jpg");
+
+		} catch (Exception e) {
+					
 		}
 	}
 }

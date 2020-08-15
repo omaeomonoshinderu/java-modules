@@ -1,4 +1,13 @@
+/*** When you are done, this program will draw an ellipse 
+     that travels across the screen when the mouse is pressed.
+***/
 
+  /***********  SOUND ***************
+   * Some computers are unable to play sounds. 
+   * If you cannot play sound on this computer, set canPlaySounds to false.
+   * If you are not sure, ask your teacher 
+   * *****************/
+  boolean canPlaySounds = true;
 
 int x;
 
@@ -32,11 +41,17 @@ void draw() {
 import ddf.minim.*;
 boolean soundPlayed = false;
 void playSound() {
+  
+  if (canPlaySounds) {
     if (!soundPlayed) {
         Minim minim = new Minim(this);
         AudioSample sound = minim.loadSample("ding.wav");
         sound.trigger();
         soundPlayed = true;
     }
+  }
+  fill(0);
+  textSize(36);
+  text("WINNER!!", width/2, height/2);
 }
 */

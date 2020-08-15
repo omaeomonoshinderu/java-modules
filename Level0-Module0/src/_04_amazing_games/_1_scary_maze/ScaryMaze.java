@@ -1,6 +1,5 @@
 package _04_amazing_games._1_scary_maze;
 
-
 import java.awt.Dimension;
 
 import java.awt.Graphics;
@@ -18,6 +17,13 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
+	
+	/***********  SOUND ***************
+	 * Some computers are unable to play sounds. 
+	 * If you cannot play sound on this computer, set canPlaySounds to false.
+	 * If you are not sure, ask your teacher 
+	 * *****************/
+	boolean canPlaySounds = true;
 	
 	boolean started = false;
 	BufferedImage maze;
@@ -94,17 +100,15 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		
 		System.out.println("BOO!");
 		
-		/***********  SOUND ***************
-		 * Some computers are unable to play the sound clip. 
-		 * If you cannot play sound on this computer, jump to SHOW A PICTURE
-		 * If you are not sure, ask your teacher 
-		 * *****************/
-		
-		//10. Find a scary sound and put it in the _04_amazing_games._1_scary_maze package (where you put your maze picture). 
-		//    You can find a sound on freesound.org. Log in as leagueofamazing/code4life.
-		
-		//11. Play the scary sound. Hint: use the playScarySound method with the name of your sound file		
-		
+		if (canPlaySounds) {
+
+			/**********  PLAY A SOUND ***************/
+			//10. Find a scary sound and put it in the _04_amazing_games._1_scary_maze package (where you put your maze picture). 
+			//    You can find a sound on freesound.org. Log in as leagueofamazing/code4life.		
+			//11. Play the scary sound. Hint: use the playScarySound method with the name of your sound file		
+
+			
+		}	
 		/**********  SHOW A PICTURE ***************/
 
 		//12. Find a scary image and drop it into the _04_amazing_games._1_scary_maze package. 

@@ -1,4 +1,4 @@
-package section2;
+package _99_extra;
 
 import org.jointheleague.graphical.robot.Robot;
 
@@ -8,7 +8,7 @@ import org.jointheleague.graphical.robot.Robot;
 * 2. ask students how they might use the method to make the picture in the laminated hand-outs. */
 
 public class StarShow {
-	
+
 	// This code creates a Batman Robot
 	Robot batman = new Robot("batman");
 	
@@ -78,7 +78,7 @@ public class StarShow {
 
     	// End the while loop here
 
-	}
+}
 	
 	public static void main(String[] args) {
 		new StarShow().makeStars();

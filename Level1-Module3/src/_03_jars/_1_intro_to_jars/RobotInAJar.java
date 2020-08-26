@@ -29,13 +29,14 @@ public class RobotInAJar {
 
 	 /* 3.  So first we need to get the League's Robot code (from GitHub) */
 	  
-	 /* The League's Robot code has been packaged into a JAR (Java ARchive) which is like a Zip file
-	  * which is used to put all the information the Robot class needs in one compressed file.
+	 /* The League's Robot code has been packaged into a JAR (Java ARchive) which is like a Zip file.
+	  * JARS are used to put all the information a class (or group of classes) needs in a single
+	  * (and compressed) file. This makes is easier to share code with other users and programs.
 	  * 
 	  * Go to https://github.com/jointheleague/league-jars and download the robot.jar file from GitHub
 	  */ 
 
-	 /* 4.  Put the Robot JAR in this project */
+	 /* 4.  Put the Robot JAR into this project */
   	 /* HOW?
 	 *  Drag and drop the robot.jar file you just downloaded to your computer into the current project in
 	 *  Eclipse.

@@ -22,6 +22,12 @@ import javax.swing.JLabel;
 
 public class MediaPalace {
 
+	 /*NOTE: To play mp3 files, you will need javazoom.jar in the build path. 
+	 *    If you don't have javazoom.jar in the project, you can download it from here: http://bit.ly/javazoom
+	 *    Right click the project and add it as a JAR (Under Java Build Path > Libraries).
+	 */     
+	
+	
 	public JLabel loadImageFromTheInternet(String imageURL) throws MalformedURLException {
 		URL url = new URL(imageURL);
 		Icon icon = new ImageIcon(url);
@@ -46,10 +52,9 @@ public class MediaPalace {
 	}
 
 	/*
-	 * To use this method, you must first have the javazoom jar inthe project.
-	 * If this jar has not been added, you can download from: http://www.javazoom.net/javalayer/javalayer.html
-	 * Uncomment this method.
+	 * Only uncomment this method if you have javazoom.jar in the build path.
 	 */
+	
 	// private void playMp3FromComputer(String fileName) throws JavaLayerException {
 	// FileInputStream songStream = new FileInputStream(fileName);
 	//

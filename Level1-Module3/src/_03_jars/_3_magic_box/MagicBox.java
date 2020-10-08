@@ -1,4 +1,4 @@
-package _04_magic_box;
+package _03_jars._3_magic_box;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
@@ -32,6 +32,9 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	 * 3. Choose 3 different locations on the background image.You can either use the mouse position, 
 	 *    or the color of the image, then decide what action the Media Palace should take in each case. 
 	 *     backgroundImage.getRGB(e.getX(), e.getY()) will give you the color of the current pixel.
+	 *     
+	 *   
+	 *     
 	 */
 
 	BufferedImage backgroundImage;
@@ -57,7 +60,7 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	}
 
 	private void loadBackgroundImage() throws Exception {
-		String imageFile = "src/_04_magic_box/magic-box.jpg";
+		String imageFile = "src/_03_jars/_3_magic_box/magic-box.jpg";
 		try {
 			backgroundImage = ImageIO.read(new File(imageFile));
 		} catch (IOException e) {

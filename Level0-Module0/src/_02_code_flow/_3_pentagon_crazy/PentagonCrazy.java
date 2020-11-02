@@ -30,8 +30,7 @@ public class PentagonCrazy {
 
 		//  LOOP. Start a while loop to repeat the DRAW, TURN, and INCREASE COUNT code 200 times. 
 		
-				//  DRAW.  Make the robot move "i" pixels
-				//         "i" is the variable in the for loop
+				//  DRAW.  Make the robot move the amount in your count variable
 		
 				//  TURN.  Turn the robot the amount in your angle variable + 1
 

@@ -11,8 +11,32 @@ import _01_array_list_visualizer.data.ArrayList;
 public class VisualArrayLists implements ActionListener {
 	Timer timer;
 	JFrame frame = new JFrame();
+	
 	ArrayList<String> list = new ArrayList<String>();
 
+	public void addThingsToList() {
+		// 1. Add a bunch of items to our list (4 or 5 should be enough!)
+		
+		// 2. Set one item in our list to be something different
+		
+		// 3. Remove something from our list
+		
+		// 4. Print the size of our list
+		
+		// 5. Check if our list contains a specific thing of your choice
+		//	  and print whether it is in the list or not.
+		
+		// 6. Get a specific item from our list and print it out
+		
+		// 7. Clear our list of all items
+		
+		// 8. Print the size of our list again
+	}
+	
+	
+	/*
+	 * ------------DONT CHANGE ANYTHING BELOW THIS LINE-----------------------------------------
+	 */
 	public static void main(String[] args) {
 		VisualArrayLists vcc = new VisualArrayLists();
 		vcc.setup();
@@ -26,21 +50,7 @@ public class VisualArrayLists implements ActionListener {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(list.displayPanel);
 		frame.pack();
-
-		list.add("Hi");
-		list.add("Moped");
-		list.add("Canoe");
-		list.add("Taco");
-		list.add("John");
-		list.add(2, "Spain");
-		list.set(1, "Code");
-		list.remove(3);
-		list.add("Jack");
-		list.size();
-		list.contains("Coal");
-		list.get(3);
-		list.clear();
-
+		addThingsToList();
 	}
 
 	@Override

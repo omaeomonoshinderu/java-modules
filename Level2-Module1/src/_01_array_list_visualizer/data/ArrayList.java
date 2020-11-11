@@ -205,6 +205,9 @@ public class ArrayList<T> {
 	 * call returns.
 	 */
 	public void clear() {
+		for(int i = expectedList.length-1; i>=0; i--) {
+			remove(i);
+		}
 		list = (T[]) new Object[0];
 		expectedList = (T[]) new Object[0];
 	}

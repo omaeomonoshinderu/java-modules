@@ -16,7 +16,7 @@ public class ReturnTypesAdvanced {
 		
 		//3. If the shape CAN be drawn
 		
-			//4. Call and save what is returned from calculateTurningAngle()
+			//4. Call and save what is returned from calculateTurnAngle()
 		
 			//5. Use drawPolygon() to draw your shape
 		

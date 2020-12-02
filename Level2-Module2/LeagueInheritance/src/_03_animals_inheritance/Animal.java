@@ -1,11 +1,11 @@
 package _03_animals_inheritance;
 
-public class Animals {
+public class Animal {
 	String name;
 	String furColor;
 	boolean isGirl;
 	
-	Animals(String name, String furColor, boolean isGirl) {
+	Animal(String name, String furColor, boolean isGirl) {
 		this.name=name;
 		this.furColor=furColor;
 		this.isGirl=isGirl;

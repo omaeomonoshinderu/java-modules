@@ -27,10 +27,10 @@ public class Serialization {
 
 	@Test
 	public void test() {
-		// Construct a SaveData object and save it to a file
+		// Construct a MinecraftCreeper object and save it to a file
 		save(new MinecraftCreeper("Bonnie", 100, 250, 0));
 
-		// Load the SaveData object from the file
+		// Load the MinecraftCreeper object from the file
 		MinecraftCreeper creeper = load();
 
 		assertEquals("Bonnie", creeper.name);

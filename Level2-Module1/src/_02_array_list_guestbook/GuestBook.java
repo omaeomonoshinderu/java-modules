@@ -1,4 +1,4 @@
-package intro_to_array_lists;
+package _02_array_list_guestbook;
 
 public class GuestBook {
 	// Create a GUI with two buttons. One button reads "Add Name" and the other button reads "View Names". 

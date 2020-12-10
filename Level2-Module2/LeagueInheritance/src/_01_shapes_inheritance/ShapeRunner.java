@@ -4,15 +4,16 @@ import java.awt.Color;
 
 /*
  * This package of classes is very similar to what you just saw, except it uses inheritance.
- * Inheritance can be thought of as a parent and child. The child inherits some of its 
+ * Inheritance can be thought of as a parent and child relationship. The child inherits some of its 
  * parent's traits, such as eye or hair color.  The same thing is true for code. 
  * Inheritance is where one class "inherits"/gets the variables and methods of another class.
  * This means the classes will share some of the same variables and methods, just like a parent
  * and child can share the same eye color.
  * 
- * As you can see the ShapesRunner class is identical to the previous one. Run the code.
- * It is the same result as the previous code. However, we now have a new class in this 
- * package called Shape. Go take a look at it.
+ * As you can see the ShapeRunner class is identical to the previous one. Run the code.
+ * It is the same result as the previous code. 
+ * 
+ * However, we now have a new class in this package called Shape. Go take a look at it.
  */
 public class ShapeRunner {
 	public static void main(String[] args) {

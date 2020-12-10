@@ -3,14 +3,14 @@ package _00_shapes_original;
 import java.awt.Color;
 
 /*
- * This package contains several classes and this runner class creates an object
- * of each and calls their methods. 
+ * This package contains several classes(Hexagon, Square, Triangle). This runner 
+ * class creates an object of each and calls their methods. 
  * 
  * Look at all the code in the Hexagon, Square, and Triangle classes. 
  * 
  * This should look familar. Run the code to see what happens.
  * 
- * Now go to the _01_shapes_inheritance package and open that ShapesRunner class.
+ * Now go to the _01_shapes_inheritance package and open that ShapeRunner class.
  */
 public class ShapeRunner {
 	public static void main(String[] args) {

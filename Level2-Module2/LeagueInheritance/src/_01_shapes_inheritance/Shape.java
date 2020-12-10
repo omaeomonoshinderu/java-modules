@@ -38,6 +38,4 @@ public class Shape {
 		rob.penDown();
 	}
 	
-	
-	
 }

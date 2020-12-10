@@ -15,5 +15,5 @@ public class Triangle extends Shape {
 			rob.turn(120);
 		}
 	}
-
+	
 }

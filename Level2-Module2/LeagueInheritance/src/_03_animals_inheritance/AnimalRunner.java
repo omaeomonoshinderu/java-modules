@@ -5,7 +5,7 @@ package _03_animals_inheritance;
  *   in order for this code to work.
  * 
  * HINT: We need a Super class to have all the things that Dog and Cat 
- *       have in common. Lets call that class Animals.
+ *       have in common. Lets call that class Animal.
  */
 public class AnimalRunner {
 	public static void main(String[] args) {

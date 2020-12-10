@@ -32,5 +32,5 @@ public class Triangle  {
 			rob.turn(120);
 		}
 	}
-
+	
 }

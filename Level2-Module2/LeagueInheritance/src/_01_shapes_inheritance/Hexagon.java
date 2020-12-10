@@ -7,7 +7,7 @@ import java.awt.Color;
  * so the Hexagon class extends the Shape class. 
  * 
  * Notice how we do not have member variables written at the top of 
- * the class, like before. That is because we "inherit" them from 
+ * this class anymore. That is because we "inherit" them from 
  * the Shape class. Think back to the parent and child. They share 
  * the same eye and hair color, just like Shape and Hexagon share 
  * the same member variables(xLocation,yLocation,size,color,rob).
@@ -34,5 +34,5 @@ public class Hexagon extends Shape {
 			rob.turn(60);
 		}
 	}
-
+	
 }

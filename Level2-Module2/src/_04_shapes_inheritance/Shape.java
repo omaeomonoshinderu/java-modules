@@ -1,4 +1,4 @@
-package _01_shapes_inheritance;
+package _04_shapes_inheritance;
 
 import java.awt.Color;
 
@@ -14,7 +14,7 @@ import org.jointheleague.graphical.robot.Robot;
  * the shape so we put the setupRobot() method in here as well. 
  * 
  * Look at the other classes(Hexagon,Square,Triangle) and see if you can spot the 
- * differences between these and the ones in the _00_shapes_original package.
+ * differences between these and the ones in the _03_shapes_original package.
  */
 public class Shape {
 	int xLocation;

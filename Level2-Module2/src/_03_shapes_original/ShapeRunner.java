@@ -1,4 +1,4 @@
-package _00_shapes_original;
+package _03_shapes_original;
 
 import java.awt.Color;
 
@@ -10,7 +10,7 @@ import java.awt.Color;
  * 
  * This should look familar. Run the code to see what happens.
  * 
- * Now go to the _01_shapes_inheritance package and open that ShapeRunner class.
+ * Now go to the _04_shapes_inheritance package and open that ShapeRunner class.
  */
 public class ShapeRunner {
 	public static void main(String[] args) {

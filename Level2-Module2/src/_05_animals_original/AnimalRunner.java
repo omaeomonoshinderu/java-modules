@@ -1,11 +1,11 @@
-package _03_animals_inheritance;
+package _05_animals_original;
 
 /*
- * 1)Similar to the shapes example, use inheritance to create classes 
- *   in order for this code to work.
+ * 1. Run the code and see the output.
  * 
- * HINT: We need a Super class to have all the things that Dog and Cat 
- *       have in common. Lets call that class Animal.
+ * 2. Look at the Dog and Cat classes to familiarize yourself with the code.
+ * 
+ * 3. Go look at theAnimalRunner class in the _06_animals_inheritance package.
  */
 public class AnimalRunner {
 	public static void main(String[] args) {

@@ -14,10 +14,10 @@ import javax.swing.JLabel;
  * Basically, the Parent and sub-class will have the same name method,
  * BUT they won't have the same code in them.
  * 
- * 1) Run the Runner Class to see what happens
+ * 1. Run the Runner Class to see what happens
  * 
- * 2) The 2 pizzas are the same...we are going to fix that
- * 	  Go to the PepperonPizza class
+ * 2. The 2 pizzas are the same...we are going to fix that
+ * 	  Go to the PepperoniPizza class
  */
 public class Pizza {
 	JFrame frame = new JFrame();

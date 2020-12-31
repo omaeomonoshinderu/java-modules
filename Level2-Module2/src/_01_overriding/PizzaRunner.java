@@ -3,7 +3,7 @@ package _01_overriding;
 /*
  * We should see a regular pizza and a pepperoni pizza
  */
-public class Runner {
+public class PizzaRunner {
 	public static void main(String[] args) {
 		Pizza p = new Pizza();
 		p.make();

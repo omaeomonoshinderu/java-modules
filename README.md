@@ -34,6 +34,3 @@ Make changes or suggestions
 ### Fixed
 - R2D2 typo in robots in space
 
-### [changelog]
-
-[changelog]: https://github.com/League-central/java-modules/blob/development/CHANGELOG.md

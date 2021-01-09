@@ -19,13 +19,13 @@ public class Schedule {
         weeklyAvailability.put("Sunday", new ArrayList<Integer>());
     }
     
+    /*
+     * Use this method in your solution
+     */
     public HashMap<String, ArrayList<Integer>> getSchedule(){
         return weeklyAvailability;
     }
     
-    /*
-     * Use this method to add an available time to a person's schedule
-     */
     public void addAvailability( String day, Integer startTime ){
         String dayOfTheWeek = day;
         

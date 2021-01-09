@@ -16,7 +16,8 @@ public class _00_SortingDemo {
          * 
          * The outer for loop runs the inner for loop for the number of
          * elements in the data structure. So if an array has 5 elements, the
-         * outer for loop runs 5 times. 
+         * outer for loop runs 5 times and all 5 elements are in their
+         * correctly ordered position. 
          */
         
         /*

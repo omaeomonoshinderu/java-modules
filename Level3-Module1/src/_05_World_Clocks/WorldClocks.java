@@ -24,9 +24,12 @@ import javax.swing.Timer;
  *   Calendar c = Calendar.getInstance(timeZone);
  *   System.out.println("Full date and time: " + calendar.getTime());
  * 
+ * NOTE: The program may take a second or two to execute
+ * 
  * Calendar class:
  * https://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html
  */
+
 public class WorldClocks implements ActionListener {
     ClockUtilities clockUtil;
     Timer timer;

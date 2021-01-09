@@ -10,6 +10,23 @@ import java.util.HashMap;
 public class Utilities {
     private final static String caliWeatherFilename = "california_cities_weather.txt";
     
+    /*
+     * Use this method to do case-insensitive searches for city names
+     */
+    public static String capitalizeWords( String cityName ) {
+        String formattedCityName = "";
+        
+        String[] cityNameWords = cityName.split(" ");
+        for( String word : cityNameWords ) {
+            formattedCityName += word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase() + ' ';
+        }
+        
+        return formattedCityName.trim();
+    }
+    
+    /*
+     * Use this method to get a HashMap of a San Diego city and the weather data
+     */
     public static HashMap<String, WeatherData> getWeatherData() {
         HashMap<String, WeatherData> weatherData = new HashMap<>();
         HashMap<String, Integer> duplicateLocations = new HashMap<>();

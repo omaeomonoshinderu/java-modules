@@ -20,10 +20,10 @@ public class _00_QueueDemo {
          * The oldest object added to a Queue is called the 'front' or 'head'
          * of the Queue. The most recent object added to a Queue is called the
          * "back" or "tail" of the Queue. Similar to a Stack, adding and
-         * removing objects from the middle of a Queue is not allowed. This
-         * maintains the order of the Queue where the first object added is the
-         * first object out of the Queue. This ordering is called First In
-         * First Out, or FIFO for short.
+         * removing objects from the middle of a Queue is not typically
+         * allowed. This maintains the order of the Queue where the first
+         * object added is the first object out of the Queue. This ordering is
+         * called First In First Out, or FIFO for short.
          *      add to back+           +front (next to be removed)
          *                 |           |
          *                  "C" "B" "A"

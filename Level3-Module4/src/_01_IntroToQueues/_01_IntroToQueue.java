@@ -17,8 +17,8 @@ public class _01_IntroToQueue {
     //    elements. If there aren't enough elements in the Stack to fill the 
     //    queue, fill the queue as much as possible. 
     
-    // 7. Loop until there are no more elements in the Stack and Queue and all
-    //    the elements are printed
+    // 7. Loop until there are no more elements in either the Stack or Queue
+    //    and all the elements are printed
 
     
     /* Example:
@@ -29,9 +29,9 @@ public class _01_IntroToQueue {
      * stack: { ..., 60, 36 }
      * queue: { 10, 75, 65, 4, 88 }
      * 
-     * Remove a random number of elements from the front of the queue
-     * (2 in this example) and print the number of elements being removed
-     * and the elements
+     * Remove a random number of values from the front of the queue
+     * (2 in this example) and print the number of values being removed
+     * and the values themselves
      * stack: { ..., 60, 36 }
      * queue: { 65, 4, 88 }
      * "Removing 2 elements: 10 75"

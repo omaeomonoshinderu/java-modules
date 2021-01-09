@@ -10,6 +10,7 @@ import _02_Thanos_Sort.ThanosSort;
  * Then complete the steps in the classes in the following order:
  * BubbleSorter
  * BogoSorter
+ * ThanosSorter
  * 
  * The classes below are for reference only. You don't have to code these.
  * These classes are here to highlight different ways to sort data.

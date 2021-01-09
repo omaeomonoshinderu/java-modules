@@ -6,12 +6,12 @@ public class BubbleSorter extends Sorter{
     }
 
     /* 
-     * 1. Use the bubble sorting algorithm to sort the array.
-     *    You can use display.updateDisplay() to show the current
-     *    progress on the graph.
+     * Use the bubble sorting algorithm to sort the array.
+     * You can use display.updateDisplay() to show the current
+     * progress on the graph.
      */
     @Override
     void sort(int[] array, SortingVisualizer display) {
-
+        
     }
 }

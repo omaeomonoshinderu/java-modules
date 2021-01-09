@@ -1,5 +1,5 @@
 package _02_Hangman;
 
-public class HangMan{
+public class HangMan {
 
 }

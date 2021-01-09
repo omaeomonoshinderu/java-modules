@@ -68,7 +68,8 @@ public class _00_SearchingAlgorithmsDemo {
         System.out.println(targetValue + " found at index: " + indexOfValue);
         
         /*
-         * Using the Arrays class's Binary Search. Remember the data has to be sorted first!
+         * Using the Arrays class's Binary Search.
+         * Remember the data has to be sorted first!
          */
         targetValue = 12;
         indexOfValue = -1; 
@@ -81,7 +82,8 @@ public class _00_SearchingAlgorithmsDemo {
         System.out.println(targetValue + " found at index: " + indexOfValue);
         
         /*
-         * Using the Collection class's Binary Search. Remember the data has to be sorted first!
+         * Using the Collection class's Binary Search.
+         * Remember the data has to be sorted first!
          */
         targetValue = 12;
         indexOfValue = -1;

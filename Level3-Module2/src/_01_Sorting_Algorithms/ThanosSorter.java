@@ -45,52 +45,8 @@ public class ThanosSorter extends Sorter {
      * elements away randomly until half (in this case (n-1)/2) remain. The
      * algorithm is up to you!
      */
-
     @Override
     void sort(int[] arr, SortingVisualizer display) {
-        int start = 0;
-        int end = arr.length;
-        boolean balanced = false;
-
-        while( !balanced ) {
-            balanced = true;
-            
-            for (int i = start; i < end - 1 ; i++) {
-                
-                if (arr[i] > arr[i + 1]) {
-                    // Not in order, need to remove half
-                    
-                    boolean frontHalf = new Random().nextBoolean();
-                    int halfway = ((end - start) / 2) + start;
-                    
-                    if( frontHalf ) {
-                        snap(arr, start, halfway);
-                        start = halfway;
-                    } else {
-                        snap(arr, halfway, end);
-                        end = halfway;
-                    }
-                    
-                    balanced = false;
-
-                    display.updateDisplay();
-                    try {
-                        Thread.sleep(500);
-                    } catch (InterruptedException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-                    break;
-                }
-            }
-        }
-    }
-
-    public static void snap(int arr[], int start, int end) {
-        if (arr.length != 1) {
-            for( int i = start; i < end; i++ ) {
-                arr[i] = 0;
-            }
-        }
+        
     }
 }

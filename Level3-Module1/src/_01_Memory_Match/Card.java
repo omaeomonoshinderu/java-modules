@@ -14,7 +14,7 @@ public class Card extends JButton {
     private static final long serialVersionUID = 1L;
     
     /*
-     * Use this for the accessing the card images
+     * Use this class for the accessing the card images
      */
     public static String cardImagesPath = "/CardImages/";
     

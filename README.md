@@ -4,6 +4,7 @@ Make changes or suggestions
 # Changelog
 
 ## Latest Changes
+Merge conflict
 
 ### Fixed
 - Level 3

@@ -4,7 +4,6 @@ Make changes or suggestions
 # Changelog
 
 ## Latest Changes
-Merge conflict
 
 ### Fixed
 - Level 3
@@ -35,6 +34,3 @@ Merge conflict
 ### Fixed
 - R2D2 typo in robots in space
 
-### [changelog]
-
-[changelog]: https://github.com/League-central/java-modules/blob/development/CHANGELOG.md

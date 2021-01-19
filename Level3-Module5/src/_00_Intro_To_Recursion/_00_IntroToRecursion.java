@@ -3,12 +3,12 @@ package _00_Intro_To_Recursion;
 public class _00_IntroToRecursion {
     /*
      * Recursion Basics:
-     * Recursion is a method calling it self over and over instead of using loops.
+     * Recursion is a method calling itself over and over instead of using loops.
      * The cycle starts when the method is originally called.
      * 
      * countDown(5);
      * 
-     * This method, in its return statement then calls its self again restarting the cycle.
+     * This method, in its return statement then calls itself again restarting the cycle.
      * 
      * return countDown(5-1); ---> countDown(4);
      * 

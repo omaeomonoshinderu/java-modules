@@ -39,7 +39,7 @@ public class _00_StringMethodsDemo {
         System.out.println("substring2: " + substring2);
         System.out.println("substring3: " + substring3);
         
-        // Removing whiteapce from the beginning and end of a String
+        // Removing whitespace from the beginning and end of a String
         String paddedStr = "    Welcome to Java     ";
         System.out.println("String with whitespace ..:" + paddedStr);
         System.out.println("String without whitespace:" + paddedStr.trim());

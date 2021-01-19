@@ -1,6 +1,5 @@
 package _00_Intro_To_String_Methods;
 
-import java.util.Arrays;
 import java.util.Base64;
 
 /*
@@ -20,9 +19,12 @@ import java.util.Base64;
  * lastIndexOf
  * compareTo(IgnoreCase)
  * substring
+ * toUpperCase/toLowerCase
+ * valueOf
  *
  * Here are some Character methods you might find useful:
  * Character.toLowerCase(char c);
+ * Character.toUpperCase(char c);
  * Character.isLetter(char c);
  * Character.isDigit(char c);
  * Character.getNumericValue(char c);

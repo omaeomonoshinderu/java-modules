@@ -9,7 +9,11 @@ public class InsertionSorter extends Sorter {
      * Insertion Sort is similar to Bubble Sort but a little more efficient
      * You can use display.updateDisplay() to show the current
      * progress on the graph.
+     * 
+     * For further reference:
+     * https://en.wikipedia.org/wiki/Insertion_sort
      */
+    
     @Override
     void sort(int[] array, SortingVisualizer display) {
         // 1. make a for loop that starts at 1 and goes through 

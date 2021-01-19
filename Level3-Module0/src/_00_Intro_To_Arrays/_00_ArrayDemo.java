@@ -22,7 +22,7 @@ public class _00_ArrayDemo {
         /*
          * Iterating through array with a standard for-loop
          */
-        System.out.println("Here's the ArrayList of Strings:\n");
+        System.out.println("Here's the array of Strings:\n");
         
         for(int i = 0; i < names.length; i++){
             String s = names[i];

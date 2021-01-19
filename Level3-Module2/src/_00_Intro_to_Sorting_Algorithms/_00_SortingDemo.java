@@ -1,9 +1,5 @@
 package _00_Intro_to_Sorting_Algorithms;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-
 public class _00_SortingDemo {
     public static void main(String[] args) {
         /*
@@ -96,52 +92,5 @@ public class _00_SortingDemo {
             System.out.print(i + " ");
         }
         System.out.println();
-
-        /*
-         * Sorting an ArrayList using the Collections class
-         */
-        ArrayList<Double> doubleList = new ArrayList<Double>();
-        doubleList.add(5.0);
-        doubleList.add(3.0);
-        doubleList.add(2.0);
-        doubleList.add(4.0);
-        doubleList.add(0.0);
-        doubleList.add(1.0);
-        
-        // Sort list in place
-        Collections.sort(doubleList);
-        
-        for( Double i : doubleList ) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-
-        /*
-         * Sorting an ArrayList alphabetically based of the LAST letter using
-         * the Collections class and a new class
-         */
-        ArrayList<String> strList = new ArrayList<String>();
-        strList.add("xyzF");
-        strList.add("zzzA");
-        strList.add("zyaC");
-        strList.add("bytB");
-        strList.add("wqgE");
-        strList.add("voiD");
-        
-        class MyCustomCompareClass implements Comparator<String> {
-            @Override
-            public int compare(String str1, String str2) {
-                String lastLetter1 = str1.charAt(str1.length()-1) + "";
-                String lastLetter2 = str2.charAt(str2.length()-1) + "";
-                
-                return lastLetter1.compareTo(lastLetter2);
-            }
-        }
-        
-        Collections.sort(strList, new MyCustomCompareClass());
-        
-        for( String str : strList ) {
-            System.out.print(str + " ");
-        }
     }
 }

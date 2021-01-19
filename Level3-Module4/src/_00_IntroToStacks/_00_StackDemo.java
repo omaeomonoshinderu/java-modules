@@ -11,12 +11,14 @@ public class _00_StackDemo {
          * object from the Stack. For example, if 3 String objects are pushed,
          * i.e. added, to a Stack
          * Stack<String> myStack = new Stack<String>();
-         * myStack.push("A");    // oldest object added
+         * myStack.push("A");                   // oldest object added
          * myStack.push("B");
-         * myStack.push("C");    // newest object added
-         * myStack.pop()         // returns "C" 
-         * the String "C" is removed when the pop() method is called. Note that
-         * the size of the Stack is decreased by 1 every time pop() is called.
+         * myStack.push("C");                   // newest object added
+         * String topOfStack = myStack.pop()    // returns "C" 
+         * the String "C" is removed when the pop() method is called. The pop()
+         * method also returns a value that can be stored in a variable. Note
+         * that every time the pop() method is called the size of the stack is
+         * decreased by 1 even if the value isn't saved in a variable.
          * 
          * The most recent object added to a Stack is the 'top' or 'head' of
          * the Stack. Normally, adding and removing objects from the middle of
@@ -28,6 +30,10 @@ public class _00_StackDemo {
          *                    "C"
          *                    "B"
          *                    "A" -> first object pushed, last to be removed
+         *                    
+         * Note: calling the pop() method on an empty stack will cause
+         * an error. The avoid this, the Stack isEmpty() or size() methods
+         * can called beforehand to make sure this stack isn't empty.
          */
         
         /*
@@ -48,12 +54,17 @@ public class _00_StackDemo {
          * The pop() method reduces the size of the Stack by 1
          */
         System.out.println("Stack size: " + flavors.size());
-        System.out.println("Popping off the top of the stack:");
+        System.out.println("Popping 2 elements off the top of the stack:");
+        
+        String topOfStack = flavors.pop();
+        System.out.println(topOfStack);
         System.out.println(flavors.pop());
 
         /*
          * Getting the size of the Stack
-         * Notice the size is smaller by 1 after the pop() method
+         * Notice the size is smaller by 2 after two pop() methods are called
+         * regardless of whether the return value of the pop() was saved into
+         * a variable.
          */
         System.out.println("Stack size: " + flavors.size());
         

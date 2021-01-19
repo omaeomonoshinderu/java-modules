@@ -4,14 +4,12 @@ public class MergeSorter extends Sorter {
     public MergeSorter() {
         type = "Merge";
     }
-    
+
     /*
-     * Since this sorting algorithm uses recursion, 
-     * we'll make a helper method called mergeSort.
-     * Complete the steps in the mergeSort method.
-     * You can use display.updateDisplay() to show the current
-     * progress on the graph.
+     * For further reference:
+     * https://en.wikipedia.org/wiki/Merge_sort
      */
+    
     @Override
     void sort(int[] array, SortingVisualizer display) {
         // 20. call the mergeSort method with 0 and the length of the array minus one

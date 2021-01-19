@@ -12,6 +12,7 @@ public class SelectionSorter extends Sorter {
      * front (left) of the list and a sublist of the remaining unsorted items
      * that occupy the rest of the list.
      * 
+     * For further reference:
      * https://en.wikipedia.org/wiki/Selection_sort
      */
     @Override

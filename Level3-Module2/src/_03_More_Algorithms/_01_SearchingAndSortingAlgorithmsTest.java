@@ -9,9 +9,10 @@ import org.junit.Test;
 
 public class _01_SearchingAndSortingAlgorithmsTest {
     /*
-     * Create the methods in the Algorithm class so that it will make the following
-     * tests pass. When you get a green bar, uncomment the next test until you have
-     * solved them all. Expand your vocabulary while you're at it.
+     * Create the methods in the Algorithm class so that it will make the
+     * following tests pass. When you get a green bar, uncomment the next
+     * test until you have solved them all. Expand your vocabulary while
+     * you're at it.
      */
 
     // 1. Create a method that will find and return the first index of a broken egg
@@ -32,7 +33,7 @@ public class _01_SearchingAndSortingAlgorithmsTest {
 //        assertEquals(2, Algorithms.countPearls(oysters));
 //    }
 
-    // 3. Create a method that will return the height of the tallest person. */
+    // 3. Create a method that will return the height of the tallest person.
 //    @Test
 //    public void testFindMaxiumum() throws Exception {
 //        List<Double> peeps = Arrays
@@ -87,8 +88,8 @@ public class _01_SearchingAndSortingAlgorithmsTest {
 //        assertEquals(sortedSequences, Algorithms.sortDNA(unsortedSequences));
 //    }
 
-    // 9. Sort the words in alphabetical order. Your teacher may need to explain
-    // compareTo.
+    // 9. Sort the words in alphabetical order. Your teacher may need to
+    // explain the compareTo() method.
 //    @Test
 //    public void testSortStringContents() throws Exception {
 //        List<String> words = Arrays

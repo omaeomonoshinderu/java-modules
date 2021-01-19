@@ -8,7 +8,10 @@ public class _01_SortedArrayChecker {
      * The method returns true if the integer array is in ascending order
      * and false otherwise.
      */
-
+    public static boolean intArraySorted(int[] arr) {
+        
+        return false;
+    }
 
     /*
      * 2. Write a static method called doubleArraySorted.

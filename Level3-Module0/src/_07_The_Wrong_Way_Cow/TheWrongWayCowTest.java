@@ -29,7 +29,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /*
- * Instructions for this assignment are in other file!
+ * Instructions for this assignment are in TheWrongWayCow.java file
  */
 public class TheWrongWayCowTest {
 

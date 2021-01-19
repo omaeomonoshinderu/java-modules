@@ -1,16 +1,15 @@
 package _01_Sorting_Algorithms;
 
 public class HeapSorter extends Sorter {
-
     public HeapSorter() {
         type = "Heap";
     }
+
+    /*
+     * For further reference:
+     * https://en.wikipedia.org/wiki/Heapsort
+     */
     
-    // 1. Since this sorting algorithm uses recursion, 
-    //    we'll make a helper method called heapSort.
-    //    Complete the steps in the heapSort method.
-    //    You can use display.updateDisplay() to show the current
-    //    progress on the graph.
     @Override
     void sort(int[] array, SortingVisualizer display) {
         // 8. create an integer called n and set it equal 

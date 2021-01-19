@@ -1,8 +1,6 @@
 package _02_Intro_To_Searching_Algorithms;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class _00_SearchingAlgorithmsDemo {
@@ -65,34 +63,6 @@ public class _00_SearchingAlgorithmsDemo {
         
         System.out.println();
         System.out.println("Using Linear Search on list to find: " + targetValue + " in " + Arrays.toString(intList.toArray()));
-        System.out.println(targetValue + " found at index: " + indexOfValue);
-        
-        /*
-         * Using the Arrays class's Binary Search.
-         * Remember the data has to be sorted first!
-         */
-        targetValue = 12;
-        indexOfValue = -1; 
-        
-        Arrays.sort(intArr);
-        indexOfValue = Arrays.binarySearch(intArr, targetValue);
-        
-        System.out.println();
-        System.out.println("Using Binary Search on array to find: " + targetValue + " in " + Arrays.toString(intArr));
-        System.out.println(targetValue + " found at index: " + indexOfValue);
-        
-        /*
-         * Using the Collection class's Binary Search.
-         * Remember the data has to be sorted first!
-         */
-        targetValue = 12;
-        indexOfValue = -1;
-        
-        Collections.sort(intList);
-        indexOfValue = Collections.binarySearch(intList, targetValue);
-        
-        System.out.println();
-        System.out.println("Using Binary Search on list to find: " + targetValue + " in " + Arrays.toString(intList.toArray()));
         System.out.println(targetValue + " found at index: " + indexOfValue);
     }
 }

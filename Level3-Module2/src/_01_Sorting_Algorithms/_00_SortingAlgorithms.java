@@ -2,8 +2,6 @@ package _01_Sorting_Algorithms;
 
 import javax.swing.JOptionPane;
 
-import _02_Thanos_Sort.ThanosSort;
-
 /*
  * INSTRUCTIONS
  * Run the demo VisualSorter.jar to see the finished product. 

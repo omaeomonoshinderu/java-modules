@@ -1,7 +1,5 @@
 package _01_Sorting_Algorithms;
 
-import java.util.Random;
-
 public class ThanosSorter extends Sorter {
     public ThanosSorter() {
         type = "Thanos";

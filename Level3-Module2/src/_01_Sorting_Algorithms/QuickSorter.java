@@ -5,11 +5,11 @@ public class QuickSorter extends Sorter {
         type = "Quick";
     }
     
-    // Since this sorting algorithm uses recursion, 
-    // we'll make a helper method called quickSort.
-    // Complete the steps in the quickSort method.
-    // You can use display.updateDisplay() to show the current
-    // progress on the graph.
+    /*
+     * For further reference:
+     * https://en.wikipedia.org/wiki/Quicksort
+     */
+    
     @Override
     void sort(int[] array, SortingVisualizer display) {
         // 10. call the quickSort method with 0 and the length of the array minus one

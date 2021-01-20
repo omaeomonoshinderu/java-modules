@@ -61,7 +61,7 @@ public class _01_StringMethods {
         return 0;
     }
 
-    // Call Utitilities.encrypt at the bottom of this file to encrypt String s
+    // Call Utilities.encrypt at the bottom of this file to encrypt String s
     public static String encrypt(String s, char key) {
         return null;
     }

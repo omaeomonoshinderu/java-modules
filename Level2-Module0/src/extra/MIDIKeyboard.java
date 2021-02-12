@@ -64,7 +64,7 @@ public class MIDIKeyboard implements KeyListener{
 			// 10. call playNote() with keyCode, rowAL, and piano as the arguments
 
 
-		// 13. if rowQP contains keyCode...
+		// 13. if rowZM contains keyCode...
 
 			// 14. call playNote() with keyCode, rowZM, and drums as the arguments
 

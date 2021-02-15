@@ -16,8 +16,7 @@ public class WalkOfFame {
 
 		/** THE CHALLENGE: **/
 		/*
-		 * Make the robot draw a line of stars like this:
-		 * http://bit.ly/RobotWalk
+		 * Make the robot draw a line of 10 stars (see recipe to see how it should look)
 		 * 
 		 * Hint: The distance between stars is 50.
 		 */

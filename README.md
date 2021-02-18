@@ -16,7 +16,7 @@ Level | Title
 5 | Lambdas, Streams, and IO
 6 | Oracle Java Prep
 7 | Collaborative Coding Principles
-8 | Fullstack Development
+8 | Full Stack Development
 9 | Capstone Project for Social Good
 
 

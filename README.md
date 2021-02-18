@@ -2,7 +2,7 @@
 Make changes or suggestions
 
 <a href="https://central.jointheleague.org">
-    <img src="header.png?raw=true" />
+    <img src="League Logo F Horiz FINAL.png.png?raw=true" />
   </a>
 
 

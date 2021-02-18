@@ -1,5 +1,10 @@
-# The League of Amazing Programmers Java Modules
+# The League of Amazing Programmers Java Curriculum
 Make changes or suggestions
+
+<a href="https://central.jointheleague.org">
+    <img src="header.png?raw=true" />
+  </a>
+
 
 # Changelog
 

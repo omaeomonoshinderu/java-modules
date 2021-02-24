@@ -2,7 +2,7 @@
     <img src="header.png?raw=true" />
   </a>
 
-#  ⭐ The League of Amazing Programmers Java Curriculum  ⭐
+#  ⭐ The League of Amazing Programmers JAVA ⭐
 
 Future Level structure
 Level | Title

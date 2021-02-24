@@ -2,7 +2,7 @@
     <img src="header.png?raw=true" />
   </a>
 
-# The League of Amazing Programmers Java Curriculum
+#  ⭐ The League of Amazing Programmers Java Curriculum  ⭐
 
 Future Level structure
 Level | Title
@@ -17,7 +17,6 @@ Level | Title
 🟣 7 | Collaborative Coding Principles
 🔘 8 | Full Stack Development
 ⚪ 9 | Capstone Project for Social Good
-
 
 # Changelog
 

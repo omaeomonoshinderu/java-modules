@@ -5,20 +5,21 @@ package _07_fortune_teller;
  *    Level 1
  */
 
-import java.applet.AudioClip;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.Random;
 
 import javax.imageio.ImageIO;
-import javax.swing.JApplet;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
 
 public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 
@@ -50,15 +51,11 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
    	 int secretLocationY = 0;
    	 /** If the mouse co-ordinates and secret location are close, we'll let them ask a question. */
    	 if (areClose(mouseX, secretLocationX) && areClose(mouseY, secretLocationY)) {
-   		 // 8. Get the user to enter a question for the fortune teller
-
-   		 // 9. Find a spooky sound and put it in your _07_fortune_teller package (freesound.org)
-   		 // AudioClip sound = JApplet.newAudioClip(getClass().getResource("creepy-noise.wav"));
-   		 // 10. Play the sound
-
-   		 // 11. Use the pause() method below to wait until your music has finished
-
-   		 // 12. Insert your completed Magic 8 ball code here
+   		 // 8. Find a spooky sound and put it in your _07_fortune_teller package (freesound.org)
+   		 // play("src/_07_fortune_teller/creepy-noise.wav");
+   		 // 9. Play the sound
+         
+   		 // 10. Insert your completed Magic 8 ball code here
 
    	 }
 
@@ -90,6 +87,23 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
    	 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    	 frame.setResizable(false);
    	 frame.setVisible(true);
+    }
+    
+     public static synchronized void play(final String fileName)
+    {
+        // Note: use .wav files            
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    Clip clip = AudioSystem.getClip();
+                    AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(fileName));
+                    clip.open(inputStream);
+                    clip.start();
+                } catch (Exception e) {
+                    System.out.println("play sound error: " + e.getMessage() + " for " + fileName);
+                }
+            }
+        }).start();
     }
 
 private void showAnotherImage(String imageName) {

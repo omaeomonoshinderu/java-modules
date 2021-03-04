@@ -46,6 +46,7 @@ class _02_RowColumnSumTest {
         assertEquals(0, methods.getSumByRow(testMatrix, 2) );
     }
 
+    @Test
     void testColumnSum() {
         assertEquals(165, methods.getSumByColumn(testMatrix, 0) );
         assertEquals(-15, methods.getSumByColumn(testMatrix, 1) );

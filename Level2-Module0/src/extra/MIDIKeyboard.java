@@ -20,10 +20,10 @@ public class MIDIKeyboard implements KeyListener{
 	JLabel noteLabel = new JLabel();
 	int piano = 0;
 	int drums = 9;
-	String[] notes = { "Ab", "A", "A#", "Bb", "B", "B#", "Cb", "C", "C#", "Db", "D", "D#", "Eb", "E", "E#", "Fb", "F", "F#", "Gb", "G", "G#"};
-	ArrayList<Integer> rowQP = new ArrayList<Integer>(Arrays.asList(81,87,69,82,84,89,85,73,79,80,91,93));
-	ArrayList<Integer> rowAL = new ArrayList<Integer>(Arrays.asList(65,83,68,70,71,72,74,75,76,59,222));
-	ArrayList<Integer> rowZM = new ArrayList<Integer>(Arrays.asList(90,88,67,86,66,78,77,44,46,47));
+	String[] notes = { "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B" };
+	ArrayList<Integer> keyboardRowQtoP = new ArrayList<Integer>(Arrays.asList(81,87,69,82,84,89,85,73,79,80,91,93));
+	ArrayList<Integer> keyboardRowAtoL = new ArrayList<Integer>(Arrays.asList(65,83,68,70,71,72,74,75,76,59,222));
+	ArrayList<Integer> keyboardRowZtoM = new ArrayList<Integer>(Arrays.asList(90,88,67,86,66,78,77,44,46,47));
 	int lastKey = 0;
 
 	public static void main(String[] args) {
@@ -54,19 +54,19 @@ public class MIDIKeyboard implements KeyListener{
 		lastKey = keyCode;
 		System.out.println(keyCode);
 		
-		// 4. if rowQP contains keyCode...
+		// 4. if keyboardRowQtoP contains keyCode...
 
-			// 5. call playNote() with keyCode, rowQP, and piano as the arguments
-
-
-		// 9. if rowAL contains keyCode...
-
-			// 10. call playNote() with keyCode, rowAL, and piano as the arguments
+			// 5. call playNote() with keyCode, keyboardRowQtoP, and piano as the arguments
 
 
-		// 13. if rowZM contains keyCode...
+		// 9. if keyboardRowAtoL contains keyCode...
 
-			// 14. call playNote() with keyCode, rowZM, and drums as the arguments
+			// 10. call playNote() with keyCode, keyboardRowAtoL, and piano as the arguments
+
+
+		// 13. if keyboardRowZtoM contains keyCode...
+
+			// 14. call playNote() with keyCode, keyboardRowZtoM, and drums as the arguments
 
 
 	}
@@ -76,19 +76,19 @@ public class MIDIKeyboard implements KeyListener{
 		int keyCode = e.getKeyCode();
 		lastKey = 0;
 		
-		// 6. if rowQP contains keyCode...
+		// 6. if keyboardRowQtoP contains keyCode...
 
-			// 7. call stopNote() with keyCode, rowAL, and piano as the arguments
+			// 7. call stopNote() with keyCode, keyboardRowQtoP, and piano as the arguments
 
-		// 8. Run your program. Does it play notes when you press a key between A and L on your keyboard?
-		// 11. if rowAL contains keyCode...
+		// 8. Run your program. Does it play notes when you press a key between Q and P on your keyboard?
+		// 11. if keyboardRowAtoL contains keyCode...
 
-			// 12. call stopNote() with keyCode, rowAL, and piano as the arguments
+			// 12. call stopNote() with keyCode, keyboardRowAtoL, and piano as the arguments
 
 		
-		// 15. if rowZM contains keyCode...
+		// 15. if keyboardRowZtoM contains keyCode...
 
-			// 16. call stopNote() with keyCode, rowZM, and drums as the arguments
+			// 16. call stopNote() with keyCode, keyboardRowZtoM, and drums as the arguments
 
 		
 		
@@ -101,13 +101,13 @@ public class MIDIKeyboard implements KeyListener{
 
 	public void playNote(int keyCode, ArrayList<Integer> row, int instrument) {
 		final int note;
-		if(row == rowAL) {
+		if(row == keyboardRowAtoL) {
 			note = 49+row.indexOf(keyCode);
 		}
 		else {
 			note = 60+row.indexOf(keyCode);
 		}
-		if(row != rowZM) noteLabel.setText(getNoteName(note));
+		if(row != keyboardRowZtoM) noteLabel.setText(getNoteName(note));
 		new Thread(new Runnable() {
 			public void run() {
 				channels[instrument].noteOn(note, 120);
@@ -117,7 +117,7 @@ public class MIDIKeyboard implements KeyListener{
 	
 	public void stopNote(int keyCode, ArrayList<Integer> row, int instrument) {
 		final int note;
-		if(row == rowAL) {
+		if(row == keyboardRowAtoL) {
 			note = 49+row.indexOf(keyCode);
 		}
 		else {
@@ -127,7 +127,7 @@ public class MIDIKeyboard implements KeyListener{
 	}
 
 	private String getNoteName(int noteNumber) {
-		String name = notes[((noteNumber-11) % notes.length)];
+		String name = notes[((noteNumber-12) % notes.length)];
 		return name;
 	}
 	

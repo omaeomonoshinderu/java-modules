@@ -105,7 +105,7 @@ public class _02_2DArrayPractice {
      * first row (row 0)
      */
     public Integer test6() {
-        int[][] nums = { {8, 7, 6}, {5, 4, 3}, {2, 1, 0}};
+        int[][] nums = { {8, 7, 6, 5}, {4, 3}, {2, 1, 0} };
         
         return null;
     }
@@ -115,7 +115,7 @@ public class _02_2DArrayPractice {
      * second column (column 1)
      */
     public Integer test7() {
-        int[][] nums = { {8, 7, 6}, {5, 4, 3}, {2, 1, 0}};
+        int[][] nums = { {8, 7, 6, 5}, {4, 3}, {2, 1, 0} };
         
         return null;
     }

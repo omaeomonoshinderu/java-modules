@@ -48,13 +48,13 @@ class _02_2DArrayPracticeTest {
     @Test
     void test_6_oneRowSum() {
         Integer sum = new _02_2DArrayPractice().test6();
-        assertTrue(sum == 21);
+        assertTrue(sum == 26);
     }
     
     @Test
     void test_7_oneColumnSum() {
         Integer sum = new _02_2DArrayPractice().test7();
-        assertTrue(sum == 12);
+        assertTrue(sum == 14);
     }
     
     int[][] testMatrix = { { 10, 20, 30 },

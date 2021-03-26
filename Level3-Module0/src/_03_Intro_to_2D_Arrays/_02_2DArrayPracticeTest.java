@@ -76,4 +76,32 @@ class _02_2DArrayPracticeTest {
         assertTrue(methods.getSumByColumn(testMatrix, 1) == -15 );
         assertTrue(methods.getSumByColumn(testMatrix, 2) == 80);
     }
+    
+    @Test
+    void test_10_EastNeighbor() {
+        _02_2DArrayPractice methods = new _02_2DArrayPractice();
+        assertTrue(methods.getEastNeighbor(testMatrix, 2, 0) == -25 );
+        assertTrue(methods.getEastNeighbor(testMatrix, 0, 2) == null );
+    }
+    
+    @Test
+    void test_11_WestNeighbor() {
+        _02_2DArrayPractice methods = new _02_2DArrayPractice();
+        assertTrue(methods.getWestNeighbor(testMatrix, 2, 0) == null );
+        assertTrue(methods.getWestNeighbor(testMatrix, 0, 2) == 20 );
+    }
+    
+    @Test
+    void test_12_NorthNeighbor() {
+        _02_2DArrayPractice methods = new _02_2DArrayPractice();
+        assertTrue(methods.getNorthNeighbor(testMatrix, 2, 0) == 80 );
+        assertTrue(methods.getNorthNeighbor(testMatrix, 0, 2) == null );
+    }
+    
+    @Test
+    void test_13_SouthNeighbor() {
+        _02_2DArrayPractice methods = new _02_2DArrayPractice();
+        assertTrue(methods.getSouthNeighbor(testMatrix, 2, 0) == null );
+        assertTrue(methods.getSouthNeighbor(testMatrix, 0, 2) == 100 );
+    }
 }

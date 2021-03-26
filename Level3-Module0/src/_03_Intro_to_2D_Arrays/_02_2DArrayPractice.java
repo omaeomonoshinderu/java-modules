@@ -137,4 +137,43 @@ public class _02_2DArrayPractice {
         
         return null;
     }
+    
+    /*
+     * Return the value of the element adjacent to the specified row and column
+     * The directions East, West, North, South are relative to the 2D array
+     * matrix/grid. For example in this 3x3 2D array:
+     * 
+     *          [1][2][3]
+     *          [4][5][6]
+     *          [7][8][9]
+     * 
+     * for the 5 in the middle (row = 1, column = 1), then
+     * East neighbor = 6
+     * West neighbor = 4
+     * North neighbor = 2
+     * South neighbor = 8
+     * 
+     * 1. Assume input row and column values are valid indexes in the matrix.
+     * 2. If the neighbor does not exist, i.e. it's outside the grid
+     *    boundaries, return null.
+     */
+    public Integer getEastNeighbor(int[][] matrix, int row, int col) {
+        
+        return null;
+    }
+    
+    public Integer getWestNeighbor(int[][] matrix, int row, int col) {
+        
+        return null;
+    }
+    
+    public Integer getNorthNeighbor(int[][] matrix, int row, int col) {
+        
+        return null;
+    }
+    
+    public Integer getSouthNeighbor(int[][] matrix, int row, int col) {
+        
+        return null;
+    }
 }

@@ -4,12 +4,16 @@
 
 package _04_int._2_robot_in_space;
 
-import java.applet.AudioClip;
+
 import java.awt.KeyEventDispatcher;
 import java.awt.KeyboardFocusManager;
 import java.awt.event.KeyEvent;
+import java.io.File;
 
-import javax.swing.JApplet;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
 
 import org.jointheleague.graphical.robot.Robot;
 
@@ -75,14 +79,22 @@ public class RobotInSpace implements KeyEventDispatcher {
 		return false;
 	}
 
+	
 	public void playEureka() {
 		System.out.println("EUREKA!");
-		try {
-			AudioClip sound = JApplet.newAudioClip(getClass().getResource("r2d2-eureka.wav"));
-			sound.play();
-			Thread.sleep(3400);
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
+		String fileName = "src/_04_int/_2_robot_in_space/r2d2-eureka.wav";
+        	// Note: use .wav files            
+        	new Thread(new Runnable() {
+            	public void run() {
+			try {
+                    		Clip clip = AudioSystem.getClip();
+                    		AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(fileName));
+                    		clip.open(inputStream);
+                    		clip.start();
+                	} catch (Exception e) {
+                    		System.out.println("play sound error: " + e.getMessage() + " for " + fileName);
+                	}
+            	}
+        	}).start();
 	}
 }

@@ -40,7 +40,7 @@ public class Jeopardy implements ActionListener {
 	private int score = 0;
 	private JLabel scoreBox = new JLabel("0");
 	private int buttonCount = 0;
-	private Clip clip;
+	private Clip jeopardyThemeClip;
 
 
 
@@ -153,17 +153,17 @@ public class Jeopardy implements ActionListener {
 		String fileName = "src/_03_jeopardy/jeopardy.wav";
 		// Note: use .wav files
 		try {
-			clip = AudioSystem.getClip();
+			jeopardyThemeClip = AudioSystem.getClip();
 			AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(fileName));
-			clip.open(inputStream);
-			clip.start();
+			jeopardyThemeClip.open(inputStream);
+			jeopardyThemeClip.start();
 		} catch (Exception e) {
 			System.out.println("play sound error: " + e.getMessage() + " for " + fileName);
 		}
 	}
 
 	public void stopJeopardyTheme() {
-		clip.stop();
+		jeopardyThemeClip.stop();
 
 	}
 

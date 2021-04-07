@@ -14,22 +14,27 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
-
+import org.jointheleague.graphical.robot.KeyboardAdapter;
 import org.jointheleague.graphical.robot.Robot;
 
-public class RobotInSpace implements KeyEventDispatcher {
+public class RobotInSpace extends KeyBoardAdapter {
 
 	Robot rob = new Robot("mini");
-
+	
+	private volatile boolean movingForward = false;
+	private volatile boolean movingBackward = false;
+	private volatile boolean turningLeft = false;
+	private volatile boolean turningRight = false;
+	
 	/*
 	 * Make the Robot move around the screen when the arrow keys are pressed...
 	 * 
-	 * 1. IMPORTANT: For this recipe, use rob.microMove(distance) to move your
+	 * 1. IMPORTANT: For this recipe, use rob.move(distance) to move your
 	 * Robot and rob.setAngle(angle) to change the direction of your Robot. //Do
 	 * not add code here - go to step 2
 	 */
 
-	private void moveRobot(int keyPressed) throws InterruptedException {
+	private void moveRobot(int keyPressed){
 		// 2. Print out the keyPressed variable and write down the numbers for
 		// each arrow key
 
@@ -57,28 +62,69 @@ public class RobotInSpace implements KeyEventDispatcher {
 	}
 
 	private void controlTheRobot() {
-		KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(this);
+		rob.addKeyboardAdapter(this);
 		Robot.setWindowImage("planet.jpg");
 		rob.penUp();
 		rob.setSpeed(10);
 	}
+	
+	@Override
+	public void run() {
+		while (!Thread.currentThread().isInterrupted()) {
 
-	public boolean dispatchKeyEvent(KeyEvent e) {
-		if (e.getID() == KeyEvent.KEY_PRESSED) {
-			try {
-				moveRobot(e.getKeyCode());
-			} catch (InterruptedException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-			try {
-				checkIfR2D2Found();
-			} catch (Exception exception) {
+			if (movingForward && !movingBackward) {
+				moveRobot(KeyEvent.VK_UP);
+			} else if (movingBackward && !movingForward) {
+				moveRobot(KeyEvent.VK_DOWN);
+			} else if (turningRight && !turningLeft) {
+				moveRobot(KeyEvent.VK_RIGHT);
+			} else if (turningLeft && !turningRight) {
+				moveRobot(KeyEvent.VK_LEFT);
+			} else {
+				
 			}
 		}
-		return false;
+	}
+	
+	@Override
+	public void keyPressed(KeyEvent e) {
+		switch (e.getKeyCode()) {
+		case KeyEvent.VK_UP:
+			movingForward = true;
+			break;
+		case KeyEvent.VK_DOWN:
+			movingBackward = true;
+			break;
+		case KeyEvent.VK_LEFT:
+			turningLeft = true;
+			break;
+		case KeyEvent.VK_RIGHT:
+			turningRight = true;
+			break;
+		default:
+		}
+		
+		checkIfR2D2Found();
 	}
 
+	@Override
+	public void keyReleased(KeyEvent e) {
+		switch (e.getKeyCode()) {
+		case KeyEvent.VK_UP:
+			movingForward = false;
+			break;
+		case KeyEvent.VK_DOWN:
+			movingBackward = false;
+			break;
+		case KeyEvent.VK_LEFT:
+			turningLeft = false;
+			break;
+		case KeyEvent.VK_RIGHT:
+			turningRight = false;
+			break;
+		default:
+		}
+	}
 	
 	public void playEureka() {
 		System.out.println("EUREKA!");

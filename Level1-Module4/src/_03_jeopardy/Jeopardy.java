@@ -40,7 +40,7 @@ public class Jeopardy implements ActionListener {
 	private int score = 0;
 	private JLabel scoreBox = new JLabel("0");
 	private int buttonCount = 0;
-	
+	private Clip jeopardyThemeClip;
 
 
 
@@ -131,7 +131,7 @@ public class Jeopardy implements ActionListener {
 		// Remove this temporary message and replace it with a pop-up that asks the user the question
 		JOptionPane.showMessageDialog(null, "this is where the question will be asked");
 		
-		// Stop the theme music when they have entered their response. Hint: use the sound variable 
+		// Stop the theme music when they have entered their response. 
 		
 		// If the answer is correct
 
@@ -149,23 +149,23 @@ public class Jeopardy implements ActionListener {
 
 	}
 
-	public static synchronized void playJeopardyTheme()
-	    {
-		String fileName = "jeopardy.wav";
-	        // Note: use .wav files            
-	        new Thread(new Runnable() {
-	            public void run() {
-	                try {
-	                    Clip clip = AudioSystem.getClip();
-	                    AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(fileName));
-	                    clip.open(inputStream);
-	                    clip.start();
-	                } catch (Exception e) {
-	                    System.out.println("play sound error: " + e.getMessage() + " for " + fileName);
-	                }
-	            }
-	        }).start();
-	    }
+	public void playJeopardyTheme() {
+		String fileName = "src/_03_jeopardy/jeopardy.wav";
+		// Note: use .wav files
+		try {
+			jeopardyThemeClip = AudioSystem.getClip();
+			AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(fileName));
+			jeopardyThemeClip.open(inputStream);
+			jeopardyThemeClip.start();
+		} catch (Exception e) {
+			System.out.println("play sound error: " + e.getMessage() + " for " + fileName);
+		}
+	}
+
+	public void stopJeopardyTheme() {
+		jeopardyThemeClip.stop();
+
+	}
 
 	private Component makeScorePanel() {
 		JPanel panel = new JPanel();

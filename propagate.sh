@@ -48,7 +48,7 @@ git commit -m "Automatic Update"
 git push
 echo "Finished"
 
-git checkout main
+git checkout master
 
 #Step 3: pull from Central
 echo "Pulling from Central"

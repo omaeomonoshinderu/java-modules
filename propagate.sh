@@ -1,108 +1,93 @@
 #!/bin/sh
-#Log
-MODULES="/home/ec2-user/java-module-updater-DO_NOT_MOVE/java-modules"
-destination="/home/ec2-user/java-module-updater-DO_NOT_MOVE/destination"
-cd ${MODULES}
-git clean -fd
-exec 3>&1 4>&2
-trap 'exec 2>&4 1>&3' 0 1 2 3
-exec 1>log.out 2>&1
-#================================================================
-# HEADER
-#================================================================
-#% DESCRIPTION
-#%    This script will pull down any changes from a repo
-#%    and progpogate the changes to children repositories.
-#%
-#% EXAMPLES
-#%    ${SCRIPT_NAME} -o DEFAULT arg1 arg2
-#================================================================
-#- IMPLEMENTATION
-#-    version         ${SCRIPT_NAME} 0.0.1
-#-    author          Keith Groves
-#-    copyright       Copyright (c) The League of Amazing Programmers
-#-    script_id       100001
-#================================================================
-#TODO change to relative path.
-date
-echo "pulling changes"
+#%author: Colby Schexnayder
+
+# This script makes the following assumptions:
+#
+# 1. The local files have not been changed from Central,
+#   ANY CHANGES MUST BE COMMITTED AND PUSHED IMMEDIATELY
+#
+# 2. Once a Repository is added to the RepoList it will
+#    only be updated by this script push changes
+#    from central to the Repo
+#############################################
+#BEGIN SCRIPT
+
+
+
+
+git checkout development;
+#Step 1: check for new repos
+echo "checking for new repos"
+git pull
+#Step 2: Search through RepoList
+while read in; do
+    repoName=$(basename "$in" ".${in##*.}")
+    #If the Repo doesn't exist check github
+    if [ ! -d "$repoName" ]
+    then
+	echo "$repoName is not in Central"
+	echo "Checking github"
+	git clone $in
+#	git add ${repoName}
+    fi
+
+    if [ -d "$repoName" ]
+    then
+	echo "Removing .git"
+	cd $repoName
+	rm -rf .git
+	cd ..
+    fi
+
+done < RepoList.txt
+
+#Step 3: Update Central
+echo "Updating Central"
+git add -A
+git commit -m "Automatic Update"
+git push
+echo "Finished"
+
+git checkout master
+
+#Step 3: pull from Central
+echo "Pulling from Central"
 git pull
 
-while read in; do 
-    if ! git clone "$in" ; then
-        echo >&2 this failed
-    else
-        echo "copy repo over"
-        repoName=$(basename "$in" ".${in##*.}")
-        echo ${repoName}
-        cp -rf "${repoName}" "${destination}/java-modules/"
-        rm -rf ./*/.git
-        echo "do stuff"
-        git add ${repoName}
-        git commit -m "add ${repoName}"
-        echo "push repo"
-        git push
-    fi;
-done < RepoList.txt
-
-
-
-
-
-echo "syncing folders"
-rsync -av --exclude='.git/' --delete "${MODULES}" "${destination}" 
-
-cd "${destination}/java-modules"
-#Save current directory so we can restore it later
-cur=$PWD
-#Save command line arguments so functions can access it
-args=("$@")
-
-#changes color
-cecho(){
-    RED="\033[0;31m"
-    GREEN='\033[0;32m'
-    YELLOW='\033[1;33m'
-    # ... ADD MORE COLORS
-    NC='\033[0m' # No Color
-
-    printf "${!1}${2} ${NC}\n"
-}
-#function is executed in each sub directory
-#To access command line arguments use syntax ${args[1]} etc
-function dir_command {
-    #This example command implements doing git status for folder
-    cd $1
-    if [ "${args[0]}" == "gitignore" ]
+#Step 2: Search through RepoList
+while read in; do
+    repoName=$(basename "$in" ".${in##*.}")
+    #If the Repo doesn't exist check github
+    if [ ! -d "$repoName" ]
     then
-    cecho "GREEN" "creating gitignore in $1"
-    curl https://gitignore.io/api/java -o .gitignore
+	echo "$repoName is not in Central"
+	echo "Checking github"
+	git clone $in
+#	git add ${repoName}
+    else
+	#If the repo does exist generate .git
+	echo "$repoName exists"
+	echo "Generating .git"
+	cd $repoName
+	git clone --no-checkout $in
+	cd $repoName
+	mv ./.git ..
+	cd ..
+	rm -rf $repoName
+	echo "Updating $repoName from Central"
+	git add -A
+	git commit -m "Updated from Central"
+	git push
+	cd ..
     fi
-    pwd
-    echo $1
-    git status
-    git add .
-    cecho "GREEN" "commiting changes"
-    git commit -m "update from league central"
-    cecho "GREEN" "pushing changes"
-    git push
-    cd ..
-}
-echo "moving through directories"
-#This loop will go to each immediate child and execute dir_command
-#find . -maxdepth 1 -type d \( ! -name . \) -name 'Level[0-9]*' | while read dir; do
-#   dir_command "$dir/"
-#   
-#done
 
-while read in; do 
-        echo "copy repo over"
-        repoName=$(basename "$in" ".${in##*.}")
-        echo ${repoName}
-        dir_command "${repoName}/"
+    if [ -d "$repoName" ]
+    then
+	echo "Removing .git"
+	cd $repoName
+	rm -rf .git
+	cd ..
+    fi
 done < RepoList.txt
 
-#Restore the folder
-cd "$cur"
 
-git push

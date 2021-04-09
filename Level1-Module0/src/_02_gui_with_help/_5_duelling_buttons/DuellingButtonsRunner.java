@@ -4,8 +4,8 @@ package _02_gui_with_help._5_duelling_buttons;
  *    Level 1
  */
 
-public class DuelingButtonsRunner {
+public class DuellingButtonsRunner {
 	public static void main(String[] args) {
-		new DuelingButtons().run();
+		new DuellingButtons().run();
 	}
 }

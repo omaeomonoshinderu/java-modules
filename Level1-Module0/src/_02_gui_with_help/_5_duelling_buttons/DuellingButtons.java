@@ -13,7 +13,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class DuelingButtons implements ActionListener {
+public class DuellingButtons implements ActionListener {
 
 	JButton leftButton = new JButton();
 	JButton rightButton = new JButton();

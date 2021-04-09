@@ -91,27 +91,26 @@ public class DrumKit implements MouseListener {
 	}
 
 
-	public static synchronized void playSound(String fileName)
-    {
+	public static synchronized void playSound(String fileName) {
 		if (canPlaySounds) {
-        // Note: use .wav files  
-		String path = "src/_02_gui_with_help/_3_drum_kit/";
-        new Thread(new Runnable() {
-            public void run() {
-                try {
-                    Clip clip = AudioSystem.getClip();
-                    AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(path+fileName));
-                    clip.open(inputStream);
-                    clip.start();
-                } catch (Exception e) {
-                    System.out.println("play sound error: " + e.getMessage() + " for " + path+fileName);
-                }
-            }
-        }).start(); }
+        	// Note: use .wav files  
+			String path = "src/_02_gui_with_help/_3_drum_kit/";
+			new Thread(new Runnable() {
+				public void run() {
+					try {
+						Clip clip = AudioSystem.getClip();
+						AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(path+fileName));
+						clip.open(inputStream);
+						clip.start();
+					} catch (Exception e) {
+						System.out.println("play sound error: " + e.getMessage() + " for " + path+fileName);
+					}
+				}
+			}).start(); }
 		else {
 			JOptionPane.showMessageDialog(null, "Cannot play "+fileName, "No Sound", JOptionPane.ERROR_MESSAGE);
 		}
-    }
+	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {

@@ -41,21 +41,29 @@ public class CowTimer {
 
 	}
 
-	public static synchronized void playSound(final String file) {
+	public void playSound(final String file) {
 		String fileName = "src/_07_cow_timer/" + file;
-	        // Note: use .wav files            
-	        new Thread(new Runnable() {
-	            public void run() {
-	                try {
-	                    Clip clip = AudioSystem.getClip();
-	                    AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(fileName));
-	                    clip.open(inputStream);
-	                    clip.start();
-	                } catch (Exception e) {
-	                    System.out.println("play sound error: " + e.getMessage() + " for " + fileName);
-	                }
-	            }
-	        }).start();
+		// Note: use .wav files
+		new Thread(new Runnable() {
+			public void run() {
+				try {
+					Clip clip = AudioSystem.getClip();
+					AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(fileName));
+					clip.open(inputStream);
+					clip.start();
+				} catch (Exception e) {
+					System.out.println("play sound error: " + e.getMessage() + " for " + fileName);
+				}
+
+			}
+		}).start();
+
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	static void speak(String words) {

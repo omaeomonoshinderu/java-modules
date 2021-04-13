@@ -9,18 +9,18 @@ package _03_Intro_to_2D_Arrays;
  *          row 0  { 1,  2,  3 }
  *          row 1  { 4,  5,  6 }
  *          row 2  { 7,  8,  9 }
- *          
+ * 
  *  Where row 0 contains the numbers 1, 2, 3.
  *  and column 0 contains the numbers 1, 4, 7.
- *  
+ * 
  *  Java stores a 2D array in 'row-major order', meaning the row number is
  *  the first number in the square brackets. The row 0 elements are:
- *  
- *  Row 0 = matrix[0][0], matrix[0][1], matrix[0][2]    // 1, 2, 3  
+ * 
+ *  Row 0 = matrix[0][0], matrix[0][1], matrix[0][2]    // 1, 2, 3
  * 
  *  The second number in the square brackets is the column number.
  *  The column 0 elements are:
- *  
+ * 
  *  Column 0 = matrix[0][0], matrix[1][0], matrix[2][0] // 1, 4, 7
  */
 public class _02_2DArrayPractice {
@@ -85,7 +85,7 @@ public class _02_2DArrayPractice {
      *          null, null, null, Object
      */
     public Object test4() {
-        Object[][] objects = { {null, null, null, null}, {null, null, null, new Object()} }; 
+        Object[][] objects = { {null, null, null, null}, {null, null, null, new Object()} };
         
         return null;
     }
@@ -95,7 +95,7 @@ public class _02_2DArrayPractice {
      *          null, null, null, null
      */
     public Object test5() {
-        Object[][] objects = { {null, null, new Object(), null}, {null, null, null, null} }; 
+        Object[][] objects = { {null, null, new Object(), null}, {null, null, null, null} };
         
         return null;
     }
@@ -112,7 +112,7 @@ public class _02_2DArrayPractice {
     
     /*
      * Write an algorithm to return the sum of all the numbers in the
-     * second column (column 1)
+     * first column (column 0)
      */
     public Integer test7() {
         int[][] nums = { {8, 7, 6, 5}, {4, 3}, {2, 1, 0} };

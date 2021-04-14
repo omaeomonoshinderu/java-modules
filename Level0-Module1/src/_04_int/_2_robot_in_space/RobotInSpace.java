@@ -24,7 +24,7 @@ public class RobotInSpace extends KeyboardAdapter {
 	/*
 	 * Make the Robot move around the screen when the arrow keys are pressed...
 	 * 
-	 * 1. IMPORTANT: For this recipe, use rob.microMove(distance) to move your Robot
+	 * 1. IMPORTANT: For this recipe, use rob.move(distance) to move your Robot
 	 * and rob.setAngle(angle) to change the direction of your Robot. //Do not add
 	 * code here - go to step 2
 	 */

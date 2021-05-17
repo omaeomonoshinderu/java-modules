@@ -4,9 +4,12 @@ package _07_cow_timer;
  *    Level 1
  */
 
-import java.applet.AudioClip;
 import java.io.IOException;
-import javax.swing.JApplet;
+import java.io.File;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 public class CowTimer {
 
@@ -38,9 +41,29 @@ public class CowTimer {
 
 	}
 
-	private void playSound(String fileName) {
-		AudioClip sound = JApplet.newAudioClip(getClass().getResource(fileName));
-		sound.play();
+	public void playSound(final String file) {
+		String fileName = "src/_07_cow_timer/" + file;
+		// Note: use .wav files
+		new Thread(new Runnable() {
+			public void run() {
+				try {
+					Clip clip = AudioSystem.getClip();
+					AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(fileName));
+					clip.open(inputStream);
+					clip.start();
+				} catch (Exception e) {
+					System.out.println("play sound error: " + e.getMessage() + " for " + fileName);
+				}
+
+			}
+		}).start();
+
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	static void speak(String words) {

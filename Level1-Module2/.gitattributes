@@ -41,6 +41,7 @@
 *.mp3             binary
 *.ogg             binary
 *.ra              binary
+*.wav             binary
 
 # Video
 *.3gpp            binary

@@ -73,7 +73,7 @@ void draw(){
   // Call updatePixels() after your loop through all the pixels
   
   /*
-   * PART III: Drawing the missing sections at the bottom of the sun
+   * PART 3: Drawing the missing sections at the bottom of the sun
    *
    * The missing parts of the sun are created by drawing rectangles
    # over the sun with the same color as the background.
@@ -95,7 +95,7 @@ void draw(){
 
 
   /*
-   * PART IV: Moving the missing sun sections
+   * PART 4: Moving the missing sun sections
    *
    * To move a section upwards each rectangle's y value needs to decrease.
    * To make the section get smaller, its height needs to also decrease.
@@ -123,7 +123,7 @@ void draw(){
    // the bottom of the sun.
    
   /*
-   * PART V: Managing the missing sun sections
+   * PART 5: Managing the missing sun sections
    *
    * Using a list to manage moving multiple missing sun sections 
    */
@@ -135,7 +135,7 @@ void draw(){
    
    
   /*
-   * PART VI: Adding extras
+   * PART 6: Adding extras
    *
    * If you want to make your retro sun look more unique, try adding
    * reflections and stars.

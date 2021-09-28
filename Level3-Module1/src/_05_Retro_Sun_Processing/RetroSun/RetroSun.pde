@@ -14,11 +14,6 @@ color[] sunColors = {
   color(217, 0, 151)
 };
 
-/*
- * LOOK AT retro_sun.gif IN THIS FOLDER to see what you will be creating!
- */
-
-
 void setup(){
   // 1. Set the size of your sketch
   

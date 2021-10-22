@@ -15,6 +15,7 @@ public class IntroToMethods {
 	 * 		* ALways inside the ()
 	 * 
 	 * LOOK AT THE CODE BELOW AND FIGURE OUT THE 3 PARTS TO EACH METHOD
+	 * RUN THE CODE
 	 */
 	public static void main(String[] args) {
 		// Method1

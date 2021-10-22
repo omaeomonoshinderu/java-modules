@@ -2,8 +2,9 @@ package _03_method_writing._4_calculator;
 
 import javax.swing.JOptionPane;
 
-//GOAL: MAKE A CALCULATOR
 public class Calculator {
+
+	//GOAL: MAKE A CALCULATOR
 	public static void main(String[] args) {
 		String input1 = JOptionPane.showInputDialog("Enter a number");
 		String input2 = JOptionPane.showInputDialog("Enter another number");

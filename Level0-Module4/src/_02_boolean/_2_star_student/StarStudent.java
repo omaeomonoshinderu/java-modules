@@ -16,12 +16,12 @@ public class StarStudent {
 		// 2. Call the didYouPass method with the variable you just initialized
 		//    as the parameter so that it shows a pop-up.
 		
-		// The not operator (!) can be placed before a boolean value
-		// to temporarily "flip" the value between true and false.
+		// The "not" operator (!) can be placed before a boolean value to 
+		// temporarily "flip" the value between true and false.
 		
-		// 3. Use an ! in either your method call or the didYouPass method to
-		//    get the other pop-up to show without changing the original value 
-		//    you gave to passedExam.
+		// 3. Use a ! on the boolean variable in either your method call or in 
+		//    the didYouPass method itself to get the other pop-up to show 
+		//    without changing the original value you gave to passedExam.
 		
 	}
 	

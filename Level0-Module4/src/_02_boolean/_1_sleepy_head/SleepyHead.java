@@ -19,7 +19,7 @@ public class SleepyHead {
         // 2.) Change the value of isWeekend so that the pop-up in the
         //     if statement happens instead.
 		
-        // Notice that when using a boolean variable in an if-statement 
+        // Notice that when using a boolean variable in an if statement 
 		// there is no need for comparisons because it is already a true 
 		// or false value.
 		

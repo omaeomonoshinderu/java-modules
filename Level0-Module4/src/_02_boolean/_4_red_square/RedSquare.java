@@ -17,7 +17,7 @@ public class RedSquare {
 		boolean isSquare = true;
 		
 		// The && shown here means that both booleans must be true for the 
-		// entire if-statement to be true. It is referred to as the "and"
+		// entire if statement to be true. It is referred to as the "and"
 		// operator. 
 		if(isRed && isSquare) {
 			drawRedSquare();
@@ -31,13 +31,13 @@ public class RedSquare {
 		// 3. Write an else if statement that calls drawBlueSquare if isRed is
 		//    false AND isSquare is true. Hint: Use ! and &&.
 		
-		// 4. Write an else if statement that calls drawRedTriangle() is isRed
+		// 4. Write an else if statement that calls drawRedTriangle() if isRed
 		//    is true and isSquare is false.
 		
 		// 5. Write an else if statement that calls drawBlueTriangle if both
 		//    isRed and isSquare are false.
 		
-		// 6. Keep rerunning your program, initializing isRed and IsSquare to 
+		// 6. Keep rerunning your program, initializing isRed and isSquare to 
 		//    different values until you've seen a red square, red triangle, 
 		//    blue square and blue triangle drawn.
 		
@@ -49,14 +49,18 @@ public class RedSquare {
 		//    the program. If drewRedSquare OR drewBlueSquare are true, then
 		//    tell the user they drew a square in a pop-up. Hint: ||
 		
-		// 8. Write an else-if statement that tells the user they drew a 
+		//    Notice these static booleans start off false, but update to true 
+		//    whenever you call their matching method.
+		
+		// 8. Write an else if statement that tells the user they drew a 
 		//    triangle if drewRedTriangle or drewBlueTriangle are true.
 		
 		// 9. Keep rerunning the program and change the isRed and isSquare 
-		//    variables like you did in step 5. Make sure that when it draws
+		//    variables like you did in step 6. Make sure that when it draws
 		//    a shape that the pop-up correctly says what it drew. 
 		
 	}
+	
 	static void drawRedSquare() {
 		Robot rob = new Robot();
 		rob.penDown();

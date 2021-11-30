@@ -27,15 +27,15 @@ public class FizzBuzz {
 	public static void main(String[] args) {
 		
 		for( int i = 1 ; i <= 20; i++ ) {
-			// Divisible by 3
+			// Divisible by 3 and divisible by 5
 			if() {
 				System.out.println("FizzBuzz");
 			}
-			// Divisible by 5
+			// Divisible by 3
 			else if() { 
 				System.out.println("Fizz");
 			}
-			// Divisible by 3 and divisible by 5
+			// Divisible by 5
 			else if() {
 				System.out.println("Buzz");
 			}

@@ -1,4 +1,4 @@
-package _02_backpack;
+package _03_backpack;
 
 public class BackpackRunner {
 	public static void main(String[] args) {

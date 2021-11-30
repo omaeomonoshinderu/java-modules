@@ -5,17 +5,24 @@ public class IntroToMethods {
 	 * 3 parts to a method
 	 * 
 	 * 1) Method Name
-	 * 		* Used to call the method
-	 *      * Always directly to the left of ()
+	 * 		Used to call the method
+	 * 		Always directly to the left of ()
 	 * 2) Return type
-	 * 		* The type of value returned by the method (ex: int, String, boolean)
-	 * 		* Always directly to the left of the method name 
+	 * 		The type of value returned by the method (ex: int, String, boolean)
+	 * 		"void" is a return type that returns nothing (like the move() for a Robot)
+	 * 		Always directly to the left of the method name 
 	 * 3) Parameters
-	 * 		* The values/variables passed into a method to be used
-	 * 		* ALways inside the ()
+	 * 		The values/variables passed into a method to be used
+	 * 		Always inside the ()
 	 * 
-	 * LOOK AT THE CODE BELOW AND FIGURE OUT THE 3 PARTS TO EACH METHOD
+	 * Extra Note: "public" is optional and use "static" if calling the method from main
+	 * 
+	 * 
+	 * Instructions
+	 * ------------
 	 * RUN THE CODE
+	 * LOOK AT THE CODE BELOW
+	 * FIGURE OUT THE 3 PARTS TO EACH METHOD
 	 */
 	public static void main(String[] args) {
 		// Method1

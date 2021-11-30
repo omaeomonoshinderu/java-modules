@@ -13,7 +13,7 @@ void draw() {
   
 /* Then, use a loop to make a body for the Bee! 
 (see the image on the recipe, it's a diagonal line of circles)
-Use modulo to make the colors alternate between yellow and black
+Use remainder to make the colors alternate between yellow and black
 */
 
 

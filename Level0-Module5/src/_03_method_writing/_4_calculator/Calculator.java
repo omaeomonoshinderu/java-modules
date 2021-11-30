@@ -18,14 +18,14 @@ public class Calculator {
 		// 4) Call the result() method and put the answer in a pop-up
 	}
 	
-	// 1) Make 4 methods (add, subtract, multiply, divide)
-	// 	  They should each take 2 numbers as parameters
-	// 	  and return the answer.
+	// 1) Make 4 static methods (add, subtract, multiply, divide)
+	//		They should each take 2 numbers as parameters
+	//		and return the answer.
 	 
 	
-	// 2) Make a method called " result" that takes a number
-	//    as a parameter and returns the number in a string
-	//    EX: "Your answer is " + number;
+	// 2) Make a static method called " result" that takes a number
+	//		as a parameter and returns the number in a string
+	//		EX: "Your answer is " + number;
 
 	
 }

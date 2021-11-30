@@ -1,4 +1,4 @@
-package _02_backpack;
+package _03_backpack;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2017
  *    Level 1

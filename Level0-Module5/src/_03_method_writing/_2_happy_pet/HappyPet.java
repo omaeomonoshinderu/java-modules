@@ -1,4 +1,4 @@
-package _03_method_writing._3_happy_pet;
+package _03_method_writing._2_happy_pet;
 import javax.swing.JOptionPane;
 
 public class HappyPet {

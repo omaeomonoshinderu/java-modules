@@ -2,6 +2,8 @@ package _02_boolean._4_red_square;
 
 import java.awt.Color;
 
+import javax.swing.JOptionPane;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class RedSquare {
@@ -22,14 +24,18 @@ public class RedSquare {
 		if(isRed && isSquare) {
 			drawRedSquare();
 		}
+		else {
+            JOptionPane.showMessageDialog(null, "No shape was drawn!");
+        }
 		
-		// 1. Run the program and notice drawRedSquare is not called.
+		// 1. Run the program and notice no shape is drawn.
 		
 		// 2. Initialize isRed to true instead of false and run the program 
 		//    again.
 		
-		// 3. Write an else if statement that calls drawBlueSquare if isRed is
-		//    false AND isSquare is true. Hint: Use ! and &&.
+		// 3. Write an else if statement after the if statement that calls 
+		//    drawBlueSquare if isRed is false AND isSquare is true. 
+		//    Hint: Use ! and &&.
 		
 		// 4. Write an else if statement that calls drawRedTriangle() if isRed
 		//    is true and isSquare is false.

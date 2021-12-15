@@ -1,4 +1,4 @@
-package _07_HungryHungryHippos;
+package _08_HungryHungryHippos;
 
 import java.awt.Color;
 import java.awt.Font;

@@ -11,22 +11,24 @@ public class Planet {
      */
     int x, y, width, height;
     int diameter;
-    int daysPerFullOrbit;
-    int orbitWidth;
-    Color color;
     
-    public Planet(int diameterPixels, int distanceFromSunPixels, int daysPerFullOrbit, Color color) {
+    public Planet(int diameterPixels) {
         this.diameter = diameterPixels;
-        this.orbitWidth = 2 * distanceFromSunPixels;
-        this.daysPerFullOrbit = daysPerFullOrbit;
-        this.color = color;
     }
 
     public void draw(Graphics g, int numDays) {
         /*
+         * Local variables
+         * Reassign or remove these after creating the correct member variables
+         */
+        int orbitWidth = 200;
+        int orbitalPeriod = 365;
+        Color color = Color.GRAY;
+        
+        /*
          * Update position
          */
-        double angle = 2 * Math.PI * numDays / daysPerFullOrbit;
+        double angle = 2 * Math.PI * numDays / orbitalPeriod;
         x = (int)(Math.cos(angle) * (orbitWidth/2));
         y = (int)(Math.sin(angle) * (orbitWidth/2));
         
@@ -75,7 +77,7 @@ public class Planet {
             this.moonColor = Color.WHITE;
             this.moonDiameter = 10;
             this.distPlanetToMoon = (diameter/2) + 10;
-            this.moonDaysToOrbit = daysPerFullOrbit / 10;
+            this.moonDaysToOrbit = 100;                 // arbitrarily chosen
             this.daysOffset = rand.nextInt(365);
         }
         

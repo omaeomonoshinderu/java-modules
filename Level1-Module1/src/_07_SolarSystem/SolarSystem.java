@@ -65,25 +65,13 @@ public class SolarSystem implements GameControlScene {
     int sunX, sunY;
     Long startTimeMs = null;
     Game gameFrame = new Game("Solar System");
-
-    /*
-     * Create your planets here
-     */
-    Planet mercury = new Planet(8, 80, 88, Color.RED);
-    Planet venus = new Planet(12, 90, 225, new Color(165, 42, 42));
-    Planet earth = new Planet(12, 120, 365, Color.BLUE);
-    Planet mars = new Planet(9, 150, 500, Color.RED);
-    Planet jupiter = new Planet(35, 220, 12*365, Color.GREEN);
-    Planet saturn = new Planet(30, 280, 29*365, Color.ORANGE);
-    Planet uranus = new Planet(8, 320, 84 * 365, Color.DARK_GRAY);
-    Planet neptune = new Planet(8, 350, 164 * 365, Color.BLUE);
+    
+    Planet earth = new Planet(12);
     
     public SolarSystem() {
         gameFrame.setScene(this);
         gameFrame.start();
         gameFrame.setSize(DISPLAY_WIDTH, DISPLAY_HEIGHT);
-        
-        earth.addMoon();
         
         sunX = CENTER_X - SUN_RADIUS_PIXELS;
         sunY = CENTER_Y - SUN_RADIUS_PIXELS;
@@ -91,13 +79,11 @@ public class SolarSystem implements GameControlScene {
     }
 
     int getDays() {
-        int numDays = 0;
-        
         if(startTimeMs != null) {
-            numDays = (int)((System.currentTimeMillis() - startTimeMs) / MS_PER_DAY);
+            return (int)((System.currentTimeMillis() - startTimeMs) / MS_PER_DAY);
         }
         
-        return numDays;
+        return 0;
     }
 
     @Override
@@ -126,14 +112,7 @@ public class SolarSystem implements GameControlScene {
         /*
          * Add planets here
          */
-        mercury.draw(g, numDays);
-        venus.draw(g, numDays);
         earth.draw(g, numDays);
-        mars.draw(g, numDays);
-        jupiter.draw(g, numDays);
-        saturn.draw(g, numDays);
-        uranus.draw(g, numDays);
-        neptune.draw(g, numDays);
     }
     
     @Override

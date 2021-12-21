@@ -55,7 +55,7 @@ public class SolarSystem implements GameControlScene {
     static final int DISPLAY_HEIGHT = DISPLAY_WIDTH;
     static final int CENTER_X = DISPLAY_WIDTH / 2;
     static final int CENTER_Y = DISPLAY_HEIGHT / 2;
-    static final int SUN_RADIUS_PIXELS = 60;
+    static final int SUN_RADIUS_PIXELS = (1391 / 2) / 20;
     static final int SUN_DIAMETER_PIXELS = 2 * SUN_RADIUS_PIXELS;
     static final int MS_PER_DAY = 10;
 
@@ -72,6 +72,11 @@ public class SolarSystem implements GameControlScene {
         gameFrame.setScene(this);
         gameFrame.start();
         gameFrame.setSize(DISPLAY_WIDTH, DISPLAY_HEIGHT);
+        
+        /*
+         * Add Earth's moon
+         */
+        earth.addMoon();
         
         sunX = CENTER_X - SUN_RADIUS_PIXELS;
         sunY = CENTER_Y - SUN_RADIUS_PIXELS;

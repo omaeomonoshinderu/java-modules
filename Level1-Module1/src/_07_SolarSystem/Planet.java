@@ -21,22 +21,24 @@ public class Planet {
          * Local variables
          * Reassign or remove these after creating the correct member variables
          */
-        int orbitWidth = 200;
+        int avgDistFromSun = 1496 / 10;     // You can choose a different scaling than divided by 10
         int orbitalPeriod = 365;
-        Color color = Color.GRAY;
+        Color color = Color.BLUE;
         
         /*
          * Update position
          */
         double angle = 2 * Math.PI * numDays / orbitalPeriod;
-        x = (int)(Math.cos(angle) * (orbitWidth/2));
-        y = (int)(Math.sin(angle) * (orbitWidth/2));
+        x = (int)(Math.cos(angle) * avgDistFromSun);
+        y = (int)(Math.sin(angle) * avgDistFromSun);
         
         /*
          * Draw orbit
          */
         g.setColor(color);
-        g.drawOval(SolarSystem.CENTER_X - orbitWidth/2, SolarSystem.CENTER_Y - orbitWidth/2, orbitWidth, orbitWidth);
+        g.drawOval(SolarSystem.CENTER_X - avgDistFromSun,
+                   SolarSystem.CENTER_Y - avgDistFromSun,
+                   2*avgDistFromSun, 2*avgDistFromSun);
         
         /*
          * Draw planet
@@ -77,7 +79,7 @@ public class Planet {
             this.moonColor = Color.WHITE;
             this.moonDiameter = 10;
             this.distPlanetToMoon = (diameter/2) + 10;
-            this.moonDaysToOrbit = 100;                 // arbitrarily chosen
+            this.moonDaysToOrbit = 50;                 // arbitrarily chosen
             this.daysOffset = rand.nextInt(365);
         }
         

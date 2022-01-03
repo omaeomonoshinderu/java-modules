@@ -8,5 +8,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="src/_01_methods/_1_houses/robot.jar"/>
+	<classpathentry kind="lib" path="game_tools_0.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

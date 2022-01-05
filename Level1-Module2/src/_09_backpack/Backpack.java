@@ -5,9 +5,9 @@ package _03_backpack;
  */
 
 public class Backpack {
-	private Pencil pencil;
-	private Ruler ruler;
-	private Textbook textbook;
+	Pencil pencil;
+	Ruler ruler;
+	Textbook textbook;
 
 	public void packAndCheck() {
 		// Your mission is to go to school.
@@ -47,7 +47,7 @@ public class Backpack {
 
 	public void goToSchool() {
 		if (pencil == null || ruler == null || textbook == null) {
-			System.out.println("ERROR: You are not ready for School!");
+			System.err.println("ERROR: You are not ready for School!");
 		} else {
 			System.out.println("Congratulations! You are ready for school");
 		}

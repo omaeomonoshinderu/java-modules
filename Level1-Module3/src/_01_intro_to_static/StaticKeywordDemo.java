@@ -32,7 +32,7 @@ import java.awt.Color;
  * 
  * 5. Run the program. The console should print out:
  *      circle radius = 0
- *      circle radius = null
+ *      circle color = null
  * 
  * 6. In the Circle class, remove the static keyword from the radius and color
  *    variables.
@@ -49,7 +49,7 @@ import java.awt.Color;
  *    exists AFTER the circle object is created.
  * 
  * Mixing static and non-static methods
- * 9. In this class, add static to the beginning of the addCircles() method
+ * 9. In this class, add static to the beginning of the addCircles() method.
  *    You should now see an error under the canvas variable.
  *    This is because canvas is a member variable and Java doesn't allow member
  *    variables inside static methods since member variables don't exist
@@ -72,7 +72,7 @@ public class StaticKeywordDemo {
         Circle circle1 = new Circle(20, Color.BLUE);
         Circle circle2 = new Circle(50, Color.RED);
         Circle circle3 = new Circle(100, Color.GREEN);
-            
+        
         canvas.addCircle(circle1);
         canvas.addCircle(circle2);
         canvas.addCircle(circle3);

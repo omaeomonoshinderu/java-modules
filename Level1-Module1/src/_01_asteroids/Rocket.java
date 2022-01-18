@@ -1,4 +1,4 @@
-package _01_methods._5_ConstructorsAsteroids;
+package _01_asteroids;
 
 import game_tools.GameControlScene;
 
@@ -19,41 +19,35 @@ public class Rocket implements GameControlScene {
 	boolean fire = false;
 	boolean restart = false;
 
-	
 	/*
-	 * 2.
-	 * A constructor does not have a return type and must be named the same as the class
-	 * i.e. public Rocket(){
+	 * 2. A constructor does not have a return type and must be named the same as
+	 * the class i.e. public Rocket(){
 	 * 
-	 * In the constructor initialize: 
+	 * In the constructor initialize:
 	 * 
-	 * x = AsteroidsGame.WIDTH / 2
-	 * y = AsteroidsGame.HEIGHT / 2
-	 * size = 10
+	 * x = AsteroidsGame.WIDTH / 2 y = AsteroidsGame.HEIGHT / 2 size = 10
 	 * 
 	 * and
 	 * 
 	 * collisionBox = new Rectangle(x - size / 2, y - size / 2, size, size)
 	 * 
-	 * With this you can run the game.
-	 * use WASD to move and SPACE to fire
+	 * With this you can run the game. use WASD to move and SPACE to fire
 	 */
-	
-	
-	/* 3.
-	 * If we want to be able to choose where to place the rocket we can create a constructor that has parameters for x and y
-	 * we can do this like any other method
-	 * public Rocket(int x, int y){
+
+	/*
+	 * 3. If we want to be able to choose where to place the rocket we can create a
+	 * constructor that has parameters for x and y we can do this like any other
+	 * method public Rocket(int x, int y){
 	 * 
 	 * 
-	 * We also need to initialize our variables again but this time
-	 * this.x = x
+	 * We also need to initialize our variables again but this time this.x = x
 	 * this.y = y
 	 * 
 	 * The keyword this refers to the current object, this instance of the rocket,
 	 * so we are setting the member variable x to the x passed to the constructor
 	 * 
-	 * try replacing one of the calls to the constructor with a call to this constructor.
+	 * try replacing one of the calls to the constructor with a call to this
+	 * constructor.
 	 */
 
 	@Override
@@ -63,7 +57,7 @@ public class Rocket implements GameControlScene {
 		graphics2D.setColor(Color.WHITE);
 		graphics2D.draw(collisionBox);
 		graphics2D.rotate(-Math.toRadians(angle), x, y);
-		
+
 	}
 
 	void update() {
@@ -83,7 +77,7 @@ public class Rocket implements GameControlScene {
 		}
 		x += newX * acceleration;
 		y += newY * acceleration;
-		
+
 		if (x < 0)
 			x = AsteroidsGame.WIDTH;
 		if (x > AsteroidsGame.WIDTH)
@@ -112,7 +106,8 @@ public class Rocket implements GameControlScene {
 			deccelerate = true;
 			break;
 		case KeyEvent.VK_SPACE:
-			if (!fire)fire = true;
+			if (!fire)
+				fire = true;
 			break;
 		case KeyEvent.VK_R:
 			restart = true;
@@ -120,7 +115,7 @@ public class Rocket implements GameControlScene {
 		default:
 		}
 	}
-	
+
 	@Override
 	public void keyReleased(KeyEvent e) {
 		switch (e.getKeyCode()) {

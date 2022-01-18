@@ -1,4 +1,4 @@
-package _01_methods._5_ConstructorsAsteroids;
+package _01_asteroids;
 
 import java.awt.Color;
 import java.awt.Graphics;

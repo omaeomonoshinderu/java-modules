@@ -2,6 +2,7 @@ package _03_Sorting_With_Streams;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamSorter {
@@ -11,7 +12,7 @@ public class StreamSorter {
 			Random rGen = new Random();
 			nums[i] = rGen.nextInt();
 		}
-		
+		int number = IntStream.range(0, 500).sum();
 		//1. Convert the Integer array to Stream object.
 		
 		//2. Use the sorted method of the stream to sort the numbers.
@@ -20,3 +21,16 @@ public class StreamSorter {
 		//   They should be in ascending order.
 	}
 }
+
+// 0. Lambdas and Streams
+	// Better explanations and examples
+// 1. Binary Numbers and Operations
+	//  Intro to binary
+	//  Encrypt & Decrypt, 
+	//  Robot interface, (Daniel has ideas)
+// 2. File IO
+//     
+// 3. Threads
+// 4. Sockets/API - setup server - 
+//     Central Socket Server ( Mike has code)
+

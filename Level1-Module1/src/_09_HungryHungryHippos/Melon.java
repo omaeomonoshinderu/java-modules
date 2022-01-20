@@ -1,4 +1,4 @@
-package _08_HungryHungryHippos;
+package _09_HungryHungryHippos;
 
 import java.awt.Color;
 import java.awt.Graphics;

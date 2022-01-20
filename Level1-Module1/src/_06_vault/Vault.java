@@ -1,4 +1,4 @@
-package _05_vault;
+package _06_vault;
 
 import java.util.Random;
 

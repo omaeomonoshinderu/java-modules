@@ -1,4 +1,4 @@
-package _03_harry_potter;
+package _04_harry_potter;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
@@ -11,7 +11,7 @@ package _03_harry_potter;
 		* 2. make him become invisible
 		* 3. spy on Professor Snape
 		* 4. make him become visible again
-		* 5. cast a “stupefy” spell
+		* 5. cast a “stupefy�? spell
 		*/
 
 public class HarryPotter {

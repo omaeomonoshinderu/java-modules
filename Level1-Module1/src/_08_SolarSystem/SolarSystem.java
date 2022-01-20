@@ -1,4 +1,4 @@
-package _07_SolarSystem;
+package _08_SolarSystem;
 
 import java.awt.Color;
 import java.awt.Font;

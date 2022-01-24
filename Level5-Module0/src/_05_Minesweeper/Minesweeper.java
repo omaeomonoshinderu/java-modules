@@ -57,13 +57,13 @@ public class Minesweeper extends PApplet {
     List<Cell> cells;
     
     /*
-     * Complete the method below using streams and the forEach() method so all
+     * Complete the method below using streams. Use the forEach() method so all
      * the Cell objects in the cell list are marked as revealed.
      * 
      * *Note* This can be done using a for loop, but try to do it with Streams.
      */
     void revealAllCells() {
-        cells.forEach((c)->c.revealed = true);
+        
     }
     
     /*
@@ -76,8 +76,7 @@ public class Minesweeper extends PApplet {
      *  noneMatch() // returns true if no items in the stream match the condition
      */
     boolean checkWin() {
-        //return cells.stream().filter((c)-> !c.mine && !c.revealed).count() == 0;
-        return cells.stream().noneMatch((c)-> !c.mine && !c.revealed);
+        return false;
     }
     
     /*
@@ -93,15 +92,7 @@ public class Minesweeper extends PApplet {
      *    have no surrounding mines until all neighboring cells are revealed.
      */
     void revealCell(Cell cell) {
-        if (!cell.mine) {
-            cell.revealed = true;
-            
-            if (cell.minesAround == 0) {
-                getNeighbors(cell).stream()
-                                  .filter((c)-> !c.revealed)
-                                  .forEach((c)->revealCell(c));
-            }
-        }
+        
     }
     
     /*
@@ -116,15 +107,7 @@ public class Minesweeper extends PApplet {
      * 6. Use reduce() or sum() to count the number of 1s, i.e. mines
      */
     void setNumberOfSurroundingMines() {
-        cells.stream().forEach((c) -> {
-//            c.minesAround = getNeighbors(c).stream()
-//                                           .map((neighbor) -> neighbor.mine ? 1 : 0)
-//                                           .reduce(0, (op1, op2) -> op1 + op2);
-            
-            c.minesAround = getNeighbors(c).stream()
-                                           .mapToInt((neighbor) -> neighbor.mine ? 1 : 0)
-                                           .sum();
-        });
+        
     }
     
     @Override

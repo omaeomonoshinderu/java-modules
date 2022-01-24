@@ -16,14 +16,14 @@ import processing.core.PApplet;
  * a mine. Under each cell there is either a mine, a number, or empty space.
  *   - If you click on a cell and it's a mine, you lose.
  *   - If you click on a cell and it's empty space, you're safe and can
- *     continue revealing the other cells.
+ *     continue revealing other cells.
  *   - If you click on a cell and it's a number, you're safe. The number tells
  *     you how many mines are around that cell, for instance
  *       - - M         M = mine
  *       - 2 -         - = empty space
  *       - M -         2 = empty space and there are 2 mines around this cell
- *   - You use to numbers to determine where the mines are and when all the
- *     cells without mines are revealed, you win.
+ *   - You use the numbers to determine where the mines are.
+ *   - When all the cells without mines are revealed, you win.
  *   - You can right click on a cell and place a flag on it as a reminder that
  *     there's a mine there.
  */
@@ -88,8 +88,12 @@ public class Minesweeper extends PApplet {
      *    surrounding Cell objects.
      * 4. Use a stream to reveal any of the neighboring cells in the list.
      *    The filter() and/or forEach() methods may be useful.
-     * 5. Use recursion to check any neighbors of those neighbors that may also
-     *    have no surrounding mines until all neighboring cells are revealed.
+     * 5. Call revealCell() recursively to check if any neighbors (and
+     *    neighbors of those neighbors) also need to be revealed.
+     *    For example:
+     *        M 1 - -       // When the cell with the X is clicked all
+     *        1 1 - X       // cells with '-' should be revealed
+     *        - - - -
      */
     void revealCell(Cell cell) {
         
@@ -97,9 +101,9 @@ public class Minesweeper extends PApplet {
     
     /*
      * Complete this method using streams to set the number of surrounding
-     * mines (c.minesAround) for each cell in the cells List. Some guidelines:
+     * mines, cell.minesAround, for each cell in the cells List.
      * 1. Convert the cells list to a stream.
-     * 2. Use forEach() to iterator through each cell.
+     * 2. Use forEach() to iterate through each cell.
      * 3. Call getNeighbors() to get a List of all the surrounding cell objects
      * 4. Convert the list of neighbors to a stream.
      * 5. Use a map() or mapToInt() to convert each neighbor that is a mine

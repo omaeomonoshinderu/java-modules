@@ -1,4 +1,4 @@
-package _04_Base64_Decoder;
+package _05_Base64_Decoder;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;

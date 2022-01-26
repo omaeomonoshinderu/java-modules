@@ -1,4 +1,4 @@
-package _04_Base64_Decoder;
+package _05_Base64_Decoder;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

@@ -7,11 +7,11 @@ import org.junit.jupiter.api.Test;
 /*
  * Goal: Implement left and right rotate methods.
  * 
- * Inherently Java doesn't have an instruction to perform left and right
- * rotate instructions (though there are rotate functions in the Integer class).
+ * Inherently Java doesn't have an instruction to perform left or right
+ * rotates (though there are rotate functions in the Integer class).
  * 
  * A rotate is when a bit is shifted outside the width of the variable and is
- * placed on the other side. Here is an example of a right rotate on the int 7
+ * placed on the other side. Here is an example of a right rotate on int 7
  * by 1:
  *      00000000 00000000 00000000 00000111   // original value of 7
  *      10000000 00000000 00000000 00000011   // rotate right by 1
@@ -29,11 +29,11 @@ import org.junit.jupiter.api.Test;
 public class Rotate {
     
     int rotateLeft(int value, int rotateAmount) {
-        return (value << rotateAmount) | (value >>> (32 - rotateAmount));
+        return -1;
     }
     
     int rotateRight(int value, int rotateAmount) {
-        return (value >>> rotateAmount) | (value << (32 - rotateAmount));
+        return -1;
     }
     
     @Test

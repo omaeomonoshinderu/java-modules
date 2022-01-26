@@ -54,8 +54,8 @@ package _00_Binary_Conversion;
  */
 public class _03_DecimalToBinary {
     public static void main(String[] args) {
-        System.out.println(" 43 in binary: " + String.format("%32s", convertDecimalToBinary( 43 )).replace(' ', '0'));
-        System.out.println("-43 in binary: " + convertDecimalToBinary( -43 ) );
+        System.out.println(" 43 in binary: " + String.format("%32s", convertDecimalToBinary(43)).replace(' ', '0'));
+        System.out.println("-43 in binary: " + convertDecimalToBinary(-43));
     }
 
     public static String convertDecimalToBinary(int decimalNum) {

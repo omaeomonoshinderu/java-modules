@@ -24,7 +24,7 @@ import game_tools.GameControlScene;
  *      lightsOnOff = 65            // green and cyan are on
  * 
  * The code is implemented correctly if the light pattern matches the pattern
- * in the lightSwitches.gif file in this folder.
+ * in the LightSwitches.gif file in this folder.
  */
 public class LightSwitches implements GameControlScene {
     static final int DISPLAY_WIDTH = 600;
@@ -52,7 +52,7 @@ public class LightSwitches implements GameControlScene {
      * index = 6        // return true if pink is on (bit 6 == 1)
      */
     boolean isLightOn(int index) {
-        return (lightsOnOff & (1 << index)) != 0;
+        return false;
     }
     
     /*
@@ -60,7 +60,7 @@ public class LightSwitches implements GameControlScene {
      * index = 4        // turn off yellow only (set bit 4 = 1)
      */
     void turnLightOn(int index) {
-        lightsOnOff = lightsOnOff | (1 << index);
+        
     }
     
     /*
@@ -68,7 +68,7 @@ public class LightSwitches implements GameControlScene {
      * index = 0        // turn off blue only (set bit 0 = 0)
      */
     void turnLightOff(int index) {
-        lightsOnOff = lightsOnOff & ~(1 << index);
+        
     }
     
     /*
@@ -76,7 +76,7 @@ public class LightSwitches implements GameControlScene {
      * lightsBitmap = 0b01100110  // lights 1, 2, 5, 6 on
      */
     void turnMultiLightsOn(int lightsBitmap) {
-        lightsOnOff = lightsOnOff | lightsBitmap;
+        
     }
     
     /*
@@ -84,7 +84,7 @@ public class LightSwitches implements GameControlScene {
      * lightsBitmap = 0b10000001  // lights 0, 7 off
      */
     void turnMultiLightsOff(int lightsBitmap) {
-        lightsOnOff = lightsOnOff & ~lightsBitmap;
+        
     }
     
     void runLightSequence1() {

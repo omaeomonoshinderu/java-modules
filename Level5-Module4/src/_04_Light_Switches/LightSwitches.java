@@ -29,7 +29,7 @@ import game_tools.GameControlScene;
 public class LightSwitches implements GameControlScene {
     static final int DISPLAY_WIDTH = 600;
     static final int DISPLAY_HEIGHT = 150;
-
+    
     Game gameFrame;
     
     // Changing this array requires changing the code and instructions as well
@@ -52,7 +52,7 @@ public class LightSwitches implements GameControlScene {
      * index = 6        // return true if pink is on (bit 6 == 1)
      */
     boolean isLightOn(int index) {
-        return false;
+        return (lightsOnOff & (1 << index)) != 0;
     }
     
     /*
@@ -60,7 +60,7 @@ public class LightSwitches implements GameControlScene {
      * index = 4        // turn off yellow only (set bit 4 = 1)
      */
     void turnLightOn(int index) {
-        
+        lightsOnOff = lightsOnOff | (1 << index);
     }
     
     /*
@@ -68,7 +68,7 @@ public class LightSwitches implements GameControlScene {
      * index = 0        // turn off blue only (set bit 0 = 0)
      */
     void turnLightOff(int index) {
-        
+        lightsOnOff = lightsOnOff & ~(1 << index);
     }
     
     /*
@@ -76,7 +76,7 @@ public class LightSwitches implements GameControlScene {
      * lightsBitmap = 0b01100110  // lights 1, 2, 5, 6 on
      */
     void turnMultiLightsOn(int lightsBitmap) {
-        
+        lightsOnOff = lightsOnOff | lightsBitmap;
     }
     
     /*
@@ -84,60 +84,45 @@ public class LightSwitches implements GameControlScene {
      * lightsBitmap = 0b10000001  // lights 0, 7 off
      */
     void turnMultiLightsOff(int lightsBitmap) {
-        
+        lightsOnOff = lightsOnOff & ~lightsBitmap;
+    }
+    
+    /*
+     * This method should toggle the state of multiple lights
+     * example input:
+     * lightsOnOff  = 0b10000001  // blue(0) and cyan(7) on
+     * lightsBitmap = 0b10011001  // toggle lights 0, 3, 4, 7
+     * output:
+     * lightsOnOff  = 0b00011000  // blue(0) and cyan(7) off,
+     *                               orange(3) and yellow(4) on
+     */
+    void toggleLights(int lightsBitmap) {
+        lightsOnOff = lightsOnOff ^ lightsBitmap;
     }
     
     void runLightSequence1() {
         turnLightOn(0);
         delayMs(200);
-        turnLightOff(0);
-        turnLightOn(1);
-        delayMs(200);
-        turnLightOff(1);
-        turnLightOn(2);
-        delayMs(200);
-        turnLightOff(2);
-        turnLightOn(3);
-        delayMs(200);
-        turnLightOff(3);
-        turnLightOn(4);
-        delayMs(200);
-        turnLightOff(4);
-        turnLightOn(5);
-        delayMs(200);
-        turnLightOff(5);
-        turnLightOn(6);
-        delayMs(200);
-        turnLightOff(6);
-        turnLightOn(7);
-        delayMs(200);
+        
+        for (int i = 0; i < lightColors.length - 1; i++) {
+            turnLightOff(i);
+            turnLightOn(i + 1);
+            delayMs(200);
+        }
+
         turnLightOff(7);
     }
     
     void runLightSequence2(){
         turnLightOn(7);
         delayMs(200);
-        turnLightOff(7);
-        turnLightOn(6);
-        delayMs(200);
-        turnLightOff(6);
-        turnLightOn(5);
-        delayMs(200);
-        turnLightOff(5);
-        turnLightOn(4);
-        delayMs(200);
-        turnLightOff(4);
-        turnLightOn(3);
-        delayMs(200);
-        turnLightOff(3);
-        turnLightOn(2);
-        delayMs(200);
-        turnLightOff(2);
-        turnLightOn(1);
-        delayMs(200);
-        turnLightOff(1);
-        turnLightOn(0);
-        delayMs(200);
+        
+        for (int i = lightColors.length - 1; i > 0; i--) {
+            turnLightOff(i);
+            turnLightOn(i - 1);
+            delayMs(200);
+        }
+
         turnLightOff(0);
     }
     
@@ -158,15 +143,28 @@ public class LightSwitches implements GameControlScene {
         turnMultiLightsOff((1<<8) - 1);
     }
     
+    void runLightSequence4(){
+        turnMultiLightsOff((1<<8) - 1);
+        delayMs(500);
+        turnMultiLightsOn(0b10101010);
+        delayMs(500);
+        toggleLights((1<<8) - 1);
+        delayMs(500);
+        toggleLights(0b00001111);
+        delayMs(500);
+        toggleLights(0b11110000);
+    }
+    
     public LightSwitches() {
         gameFrame = new Game("Light Switches");
+        gameFrame.setSize(DISPLAY_WIDTH, DISPLAY_HEIGHT);
         gameFrame.setScene(this);
         gameFrame.start();
-        gameFrame.setSize(DISPLAY_WIDTH, DISPLAY_HEIGHT);
         
         runLightSequence1();
         runLightSequence2();
         runLightSequence3();
+        runLightSequence4();
     }
 
     @Override
@@ -202,6 +200,5 @@ public class LightSwitches implements GameControlScene {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        gameFrame.getFrame().repaint();
     }
 }

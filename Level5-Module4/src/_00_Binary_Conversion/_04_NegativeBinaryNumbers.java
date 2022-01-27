@@ -41,20 +41,32 @@ package _00_Binary_Conversion;
  *      00000111    // 7 decimal
  *      11111000    // invert bits
  *      11111001    // add +1, -7
+ * This method is called two's complement:
+ * https://en.wikipedia.org/wiki/Two%27s_complement
  * 
  * If you need to get the binary number of a negative value, find the positive
  * binary value, then invert the bits and add 1
  */
 public class _04_NegativeBinaryNumbers {
     public static void main(String[] args) {
+        /*
+         * Negative number to positive number
+         */
         byte b = (byte) 0b11111111;
         System.out.println(printBin(b));
+        System.out.println("~11111111 + 1 = " + printBin((byte)(~b + 1)));
         
-        b = (byte) 0b10000000;
+        /*
+         * Positive number to negative number
+         */
+        b = (byte) 0b11000000;
+        System.out.println();
         System.out.println(printBin(b));
+        System.out.println("~11000000 + 1 = " + printBin((byte)(~b + 1)));
     }
     
     static String printBin(byte val) {
-        return String.format("%8s", Integer.toBinaryString(val)).replace(' ', '0').substring(32-8) + " (" + val + ")";
+        String str = String.format("%32s", Integer.toBinaryString(val)).replace(' ',  '0').substring(32-8);
+        return String.format("%8s", str) + " (" + val + ")";
     }
 }

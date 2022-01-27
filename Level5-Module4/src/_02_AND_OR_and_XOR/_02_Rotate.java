@@ -26,7 +26,7 @@ import org.junit.jupiter.api.Test;
  *      11111111 11111111 11111111 11111000   // original value of -8
  *      11111111 11111111 11111111 11110001   // rotate left by 1
  */
-public class Rotate {
+public class _02_Rotate {
     
     int rotateLeft(int value, int rotateAmount) {
         return -1;

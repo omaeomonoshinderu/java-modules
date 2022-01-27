@@ -17,7 +17,7 @@ package _00_Binary_Conversion;
  *      for each quantity in parenthesis,
  *             (1 * 10^3)   // 1 is the value at the digit
  *                          // 10 is the number of possible characters for each digit
- *                          // 3 is the number of digits from the right (the thousandths place)
+ *                          // 3 is the number of digits from the right (the thousandth place)
  * 
  * The same rules apply for binary. The only difference is the number of
  * possible characters for each digit. For decimal it's 10, for binary it's 2.
@@ -40,8 +40,8 @@ public class _01_IntroToBinary {
          * The '0b' prefix before a binary number tells Java the following
          * digits are in binary. By default the digits are decimal.
          */
-        int binaryNum = 0b1010;
-        int decimalNum = 1010;
+        int binaryNum = 0b1001;
+        int decimalNum = 1001;
         System.out.println("Binary num ....: " + binaryNum);
         System.out.println("Decimal num ...: " + decimalNum);
     }

@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 import game_tools.Game;
 import game_tools.GameControlScene;
@@ -30,6 +32,7 @@ public class LightSwitches implements GameControlScene {
     static final int DISPLAY_WIDTH = 600;
     static final int DISPLAY_HEIGHT = 150;
     
+    Deque<Runnable> workQueue;
     Game gameFrame;
     
     // Changing this array requires changing the code and instructions as well
@@ -101,58 +104,61 @@ public class LightSwitches implements GameControlScene {
     }
     
     void runLightSequence1() {
-        turnLightOn(0);
-        delayMs(200);
+        workQueue.add(()->turnMultiLightsOff(0xFF));
+        workQueue.add(()->turnLightOn(0));
+        workQueue.add(()->delayMs(200));
         
         for (int i = 0; i < lightColors.length - 1; i++) {
-            turnLightOff(i);
-            turnLightOn(i + 1);
-            delayMs(200);
+            final int iFinal = i;
+            workQueue.add(()->turnLightOff(iFinal));
+            workQueue.add(()->turnLightOn(iFinal + 1));
+            workQueue.add(()->delayMs(200));
         }
 
-        turnLightOff(7);
+        workQueue.add(()->turnLightOff(7));
     }
     
     void runLightSequence2(){
-        turnLightOn(7);
-        delayMs(200);
+        workQueue.add(()->turnLightOn(7));
+        workQueue.add(()->delayMs(200));
         
         for (int i = lightColors.length - 1; i > 0; i--) {
-            turnLightOff(i);
-            turnLightOn(i - 1);
-            delayMs(200);
+            final int iFinal = i;
+            workQueue.add(()->turnLightOff(iFinal));
+            workQueue.add(()->turnLightOn(iFinal - 1));
+            workQueue.add(()->delayMs(200));
         }
 
-        turnLightOff(0);
+        workQueue.add(()->turnLightOff(0));
     }
     
     void runLightSequence3(){
-        turnMultiLightsOff((1<<8) - 1);
-        delayMs(200);
-        turnMultiLightsOn(0b00011000);
-        delayMs(200);
-        turnMultiLightsOff(0b00011000);
-        turnMultiLightsOn(0b00100100);
-        delayMs(200);
-        turnMultiLightsOff(0b00100100);
-        turnMultiLightsOn(0b01000010);
-        delayMs(200);
-        turnMultiLightsOff(0b01000010);
-        turnMultiLightsOn(0b10000001);
-        delayMs(200);
-        turnMultiLightsOff((1<<8) - 1);
+        workQueue.add(()->turnMultiLightsOff((1<<8) - 1));
+        workQueue.add(()->delayMs(200));
+        workQueue.add(()->turnMultiLightsOn(0b00011000));
+        workQueue.add(()->delayMs(200));
+        workQueue.add(()->turnMultiLightsOff(0b00011000));
+        workQueue.add(()->turnMultiLightsOn(0b00100100));
+        workQueue.add(()->delayMs(200));
+        workQueue.add(()->turnMultiLightsOff(0b00100100));
+        workQueue.add(()->turnMultiLightsOn(0b01000010));
+        workQueue.add(()->delayMs(200));
+        workQueue.add(()->turnMultiLightsOff(0b01000010));
+        workQueue.add(()->turnMultiLightsOn(0b10000001));
+        workQueue.add(()->delayMs(200));
+        workQueue.add(()->turnMultiLightsOff((1<<8) - 1));
     }
     
     void runLightSequence4(){
-        turnMultiLightsOff((1<<8) - 1);
-        delayMs(500);
-        turnMultiLightsOn(0b10101010);
-        delayMs(500);
-        toggleLights((1<<8) - 1);
-        delayMs(500);
-        toggleLights(0b00001111);
-        delayMs(500);
-        toggleLights(0b11110000);
+        workQueue.add(()->turnMultiLightsOff((1<<8) - 1));
+        workQueue.add(()->delayMs(500));
+        workQueue.add(()->turnMultiLightsOn(0b10101010));
+        workQueue.add(()->delayMs(500));
+        workQueue.add(()->toggleLights((1<<8) - 1));
+        workQueue.add(()->delayMs(500));
+        workQueue.add(()->toggleLights(0b00001111));
+        workQueue.add(()->delayMs(500));
+        workQueue.add(()->toggleLights(0b11110000));
     }
     
     public LightSwitches() {
@@ -160,6 +166,8 @@ public class LightSwitches implements GameControlScene {
         gameFrame.setSize(DISPLAY_WIDTH, DISPLAY_HEIGHT);
         gameFrame.setScene(this);
         gameFrame.start();
+        
+        workQueue = new ArrayDeque<Runnable>();
         
         runLightSequence1();
         runLightSequence2();
@@ -170,6 +178,10 @@ public class LightSwitches implements GameControlScene {
     @Override
     public void draw(Graphics g) {
         int x, y, width, height;
+        
+        if( workQueue != null && !workQueue.isEmpty()) {
+            workQueue.pop().run();
+        }
         
         for (int i = 0; i < lightColors.length; i++) {
             Graphics2D g2 = (Graphics2D) g;
@@ -191,7 +203,25 @@ public class LightSwitches implements GameControlScene {
 
     @Override
     public void keyPressed(KeyEvent e) {
+        int keycode = e.getKeyCode();
         
+        switch( keycode ) {
+            case KeyEvent.VK_1:
+                runLightSequence1();
+                break;
+            case KeyEvent.VK_2:
+                runLightSequence2();
+                break;
+            case KeyEvent.VK_3:
+                runLightSequence3();
+                break;
+            case KeyEvent.VK_4:
+                runLightSequence4();
+                break;
+            default:
+                // Do nothing on unrecognized key
+                break;
+        }
     }
     
     void delayMs(int ms) {

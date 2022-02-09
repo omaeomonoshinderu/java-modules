@@ -17,7 +17,7 @@ import processing.core.PImage;
  *    "starryNight.jpg", "strawHatPortrait.jpg",
  *    "wheatField.jpg", "painterOnRoad.jpg"
  * 
- * 4. Declare a member variable to keep track of the current image from the
+ * 4. Declare a member variable to keep track of the current image index from the
  *    array. This variable will indicate which image to display from the array.
  * 
  * 5. In the initializePaintings() method, initialize the variable to 0

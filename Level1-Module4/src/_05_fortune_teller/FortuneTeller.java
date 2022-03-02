@@ -47,7 +47,7 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
         // If the mouse co-ordinates and secret location are close, we'll let them ask a question.
         if (areClose(mouseX, secretLocationX) && areClose(mouseY, secretLocationY)) {
             // 8. Find a spooky sound and put it in your _05_fortune_teller package (freesound.org)
-            //    play("_05_fortune_teller/creepy-noise.wav");
+            //    play("creepy-noise.wav");
             
             // 9. Play the sound
             
@@ -85,7 +85,7 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 
     public static synchronized void play(final String fileName)
     {
-        Sound sound = new Sound(fileName);
+        Sound sound = new Sound("_05_fortune_teller/" + fileName);
         sound.play();
     }
 

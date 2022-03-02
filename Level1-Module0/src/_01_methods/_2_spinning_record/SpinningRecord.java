@@ -54,11 +54,7 @@ public class SpinningRecord extends PApplet {
 
     @Override
     public void draw() {
-        if(mousePressed) {
-            song.play();
-        } else {
-            song.stop();
-        }
+        
     }
 
     static public void main(String[] args) {

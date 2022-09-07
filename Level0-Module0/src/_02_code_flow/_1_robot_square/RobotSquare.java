@@ -1,4 +1,7 @@
 package _02_code_flow._1_robot_square;
+
+import org.jointheleague.graphical.robot.Robot;
+
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2020
  *    Level 0
@@ -9,20 +12,10 @@ public class RobotSquare {
 
 	
     public static void main(String[] args){
-<<<<<<< HEAD
     	MyNumber num = new MyNumber(5);
-    	KEVIN: updateInteger(num);
-    	BOB: System.out.println("num outside "+ num.value);
-    	POP: for(int i = 0; i<10; i++) {
-    		
-    	}
     }
     
-    public static int updateInteger(MyNumber num) throw Exception {
-    	num.value++;
-    	System.out.println("num in method " + num.value);
-    	throw new Exception();
-=======
+    public static int updateInteger(MyNumber num) {
  
     	// This code makes a new Robot
     	Robot rob = new Robot();
@@ -68,7 +61,6 @@ public class RobotSquare {
     	// Run the program again. Did your Robot draw a square?
 
 
->>>>>>> df8eace4919e068a985369b73a480744d8aadc7f
     }
 }
 

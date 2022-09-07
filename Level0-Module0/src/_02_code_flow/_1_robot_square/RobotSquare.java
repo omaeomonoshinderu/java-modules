@@ -1,21 +1,16 @@
 package _02_code_flow._1_robot_square;
-
-import org.jointheleague.graphical.robot.Robot;
-
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2020
  *    Level 0
  */
+
+import org.jointheleague.graphical.robot.Robot;
+
 // This recipe draws a square using the Robot
 
 public class RobotSquare {
-
 	
     public static void main(String[] args){
-    	MyNumber num = new MyNumber(5);
-    }
-    
-    public static int updateInteger(MyNumber num) {
  
     	// This code makes a new Robot
     	Robot rob = new Robot();
@@ -62,12 +57,4 @@ public class RobotSquare {
 
 
     }
-}
-
-class MyNumber {
-	int value;
-	
-	MyNumber(int value){
-		this.value = value;
-	}
 }
